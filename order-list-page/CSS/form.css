@@ -1,0 +1,63 @@
+/*---------------head ---------------------*/
+/*---------------header end ---------------------*/
+/*---------------main ---------------------*/
+.section-a {
+  font-size: 14px;
+  color: rgb(36, 36, 36);
+  padding: 0px 0px 8px;
+  line-height: 20px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.uncheck-image {
+  margin-right: 8px;
+}
+.main_content_category_product-list_policy a img {
+  width: 140px;
+  height: 84px;
+}
+.main_content_category_product-list_policy_kind-of-product a img {
+  width: 225px;
+}
+.main_content_category_product-list_sort_p2 a img {
+  width: 56px;
+  height: 16px;
+}
+.freship-label img {
+}
+.main_content_category_product-list_category_image-list img {
+  width: 34px;
+  height: 34px;
+}
+.tikinow-image img {
+  width: 56px;
+  height: 16px;
+}
+.badge-under-price img {
+  width: 124px;
+  height: 18px;
+}
+.badge-benefits img {
+  width: 18px;
+  height: 16px;
+}
+.freegift-list {
+  display: flex;
+  margin-top: 8px;
+  align-items: center;
+}
+.small-freegift {
+  width: 18px;
+  height: 16px;
+}
+.big-freegift {
+  width: 32px;
+  height: 32px;
+  border-radius: 2.1px;
+  margin-left: 8px;
+}
+/*---------------main end ---------------------*/
+/*---------------footer ---------------------*/
+
+/*---------------footer end ---------------------*/

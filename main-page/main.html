@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-----------------------HEADER ------------------------>
+    <div id="header">
+      <div class="header__top wrapper">
+        <div class="header-top__left">
+          <!-- header-top__logo -->
+          <div class="header-top-left__logo">
+            <a href=""
+              ><img
+                width="60px"
+                height="40px"
+                src="./ASSET/image/logo.png"
+                alt="logo"
+            /></a>
+          </div>
+          <!-- header-top__order -->
+          <div class="header-top-left__order">
+            <!-- header-top-order__list -->
+
+            <a class="header-top-left-order__list" href="">
+              <div class="header-top-left-order-list__menu-btn">
+                <img
+                  width="30px"
+                  height="30px"
+                  src="./ASSET/image/hamburgerbutton.png"
+                  alt=""
+                />
+              </div>
+              <div class="header-top-left-order-list__wrap">
+                <span class="header-top-left-order-list-wrap__1">Danh Mục</span>
+                <span class="header-top-left-order-list-wrap__2">
+                  Sản Phẩm
+                  <img
+                    width="15px"
+                    height="15px"
+                    src="./ASSET/image/sort.png"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- header-top__search -->
+          <div class="header-top-left__search">
+            <div class="header-top-left-search__input">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="  Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+              />
+            </div>
+            <button class="header-top-left-search__btn">
+              &nbsp
+              <img
+                width="20px"
+                height="20px"
+                src="./ASSET/image/search.png"
+                alt=""
+              />
+              <span> Tìm Kiếm</span>
+              &nbsp
+            </button>
+          </div>
+        </div>
+        <div class="header-top__right">
+          <div class="header-top-right__personal">
+            <img
+              width="33px"
+              height="33px"
+              class="header-top-right-personal__img"
+              src="./ASSET/image/person.png"
+              alt=""
+            />
+            <div class="header-top-right-personal__account">
+              <a href="">
+                <span class="header-top-right-personal-account__1"
+                  >Đăng Nhập/Đăng Ký</span
+                >
+                <span class="header-top-right-personal-account__2">
+                  <span>Tài khoản</span>
+                  <img
+                    width="15px"
+                    height="15px"
+                    src="./ASSET/image/sort.png"
+                    alt=""
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="header-top-right__cart">
+            <a href="">
+              <div class="header-top-right-cart__img">
+                <img
+                  width="30px"
+                  height="30px"
+                  src="./ASSET/image/cart.png"
+                  alt=""
+                />
+                <div class="header-top-right-cart-img__number">0</div>
+              </div>
+              <span>Giỏ Hàng</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header-bottom__nav">
+          <a href="">tủ lạnh</a>
+          <a href="">giỏ quà tết</a>
+          <a href="">sạc dự phòng</a>
+          <a href="">sách kỹ năng sống</a>
+          <a href="">áo hoodie nam</a>
+          <a href="">sữa rửa mặt</a>
+          <a href="">airpod</a>
+        </div>
+      </div>
+    </div>
+    <!-----------------------HEADER END ------------------------>
+    <!-----------------------MAIN ------------------------>
+    <div id="main">
+      <div class="main__banner wrapper">
+        <div class="main-banner__slider">
+          <img src="./ASSET/image/slider1.jpg" alt="" />
+        </div>
+        <div class="main-banner__dis-picture">
+          <img src="./ASSET/image/dis-picture.jpg" alt="" />
+        </div>
+      </div>
+      <div class="main__dis-product wrapper">
+        <div class="main-dis-product__heading">
+          <div class="main-dis-product-heading__text">
+            <img src="./ASSET/image/giasoc.svg" alt="" />
+            <img
+              class="main-dis-product-heading-text__flash"
+              src="./ASSET/image/flash.gif"
+              alt=""
+            />
+            <img src="./ASSET/image/homnay.svg" alt="" />
+          </div>
+          <div class="main-dis-product-heading__time">
+            <span>00</span>
+            :
+            <span>00</span>
+            :
+            <span>00</span>
+            <img src="./ASSET/image/row.png" alt="" />
+          </div>
+        </div>
+        <div class="main-dis-product__content">
+          <div class="main-dis-product-content__row1">
+            <img src="./ASSET/image/row1.png" alt="" />
+          </div>
+          <div id="main-dis-product-content__list"></div>
+          <div class="main-dis-product-content__row2">
+            <img src="./ASSET/image/row1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="main__nav-1" class="wrapper"></div>
+      <div id="main__dis-brand" class="wrapper"></div>
+      <div class="main__order-list wrapper">
+        <div class="main-order-list__text">DANH MỤC NỔI BẬT</div>
+        <div id="main-order-list__product"></div>
+      </div>
+      <div class="main__search wrapper">
+        <div class="main-search__text">
+          <div class="main-search-text__left">
+            <img
+              width="24px"
+              height="24px"
+              src="./ASSET/image/search1.png"
+              alt=""
+            />
+            <span>TÌM KIẾM NỔI BẬT</span>
+          </div>
+          <div class="main-search-text__right">
+            <img
+              width="24px"
+              height="24px"
+              src="./ASSET/image/load.png"
+              alt=""
+            />
+            <span>XEM THÊM</span>
+          </div>
+        </div>
+        <div id="main-search__group"></div>
+      </div>
+      <div id="main__dis-deal" class="wrapper"></div>
+      <div class="main__product-list wrapper">
+        <div class="main-product-list__header">
+          <div class="main-product-list-header__first">
+            <div class="main-product-list-header-first__wrapper">
+              <div class="main-product-list-header-first-wrapper__content">
+                <img
+                  width="120px"
+                  height="40px"
+                  src="./ASSET/image/product-list1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-product-list-header__second">
+            <div class="main-product-list-header-second__wrapper">
+              <div class="main-product-list-header-second-wrapper__content">
+                <img
+                  width="120px"
+                  height="40px"
+                  src="./ASSET/image/product-list2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-product-list-header__third">
+            <div class="main-product-list-header-third__wrapper">
+              <div class="main-product-list-header-third-wrapper__content">
+                <img
+                  width="120px"
+                  height="40px"
+                  src="./ASSET/image/product-list3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-product-list__container">
+          <div id="main-product-list-container__main"></div>
+          <a class="main-product-list-container__more">Xem Thêm</a>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------------MAIN END ------------------------>
+    <!-----------------------FOOTER------------------------>
+    <div id="footer">
+      <div class="footer__mail-register">
+        <div class="footer-mail-register__container wrapper">
+          <div class="footer-mail-register-container__mail-icon">
+            <img
+              width="163px"
+              height="100px"
+              src="./ASSET/image/gmail.png"
+              alt=""
+            />
+          </div>
+          <div class="footer-mail-register-container__new-letter">
+            <h3>Đăng ký nhận bản tin Tiki</h3>
+            <h5>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</h5>
+          </div>
+          <div class="footer-mail-register-container-new-letter__form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Địa chỉ email của bạn"
+            />
+            <input type="submit" value="Đăng ký" id="register" />
+          </div>
+        </div>
+      </div>
+      <div class="footer__information">
+        <div class="footer-information__container wrapper">
+          <div class="footer-information-container__customer">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+            <p class="hotline">
+              Hotline chăm sóc khách hàng: <a href="">1900-6035</a
+              ><span class="small-text">(1000đ/phút, 8-21h kể cả T7, CN)</span>
+            </p>
+            <a class="small-text" href="">Các câu hỏi thường gặp</a>
+            <a class="small-text" href="">Gửi yêu cầu hỗ trợ</a>
+            <a class="small-text" href="">Hướng dẫn đặt hàng</a>
+            <a class="small-text" href="">Phương thức vận chuyển</a>
+            <a class="small-text" href="">Chính sách đổi trả</a>
+            <a class="small-text" href="">Hướng dẫn trả góp</a>
+            <a class="small-text" href="">Chính sách hàng nhập khẩu</a>
+            <a class="small-text" href="">Hỗ trợ khách hàng: hotro@tiki.vn</a>
+            <a class="small-text" href="">Báo lỗi bảo mật: security@tiki.vn</a>
+          </div>
+          <div class="footer-information-container__tiki">
+            <h4>VỀ TIKI</h4>
+            <a class="small-text" href="">Giới thiệu Tiki</a>
+            <a class="small-text" href="">Tuyển Dụng</a>
+            <a class="small-text" href="">Chính sách bảo mật thanh toán</a>
+            <a class="small-text" href=""
+              >Chính sách bảo mật thông tin cá nhân</a
+            >
+            <a class="small-text" href="">Chính sách giải quyết khiếu nại</a>
+            <a class="small-text" href="">Điều khoản sử dụng</a>
+            <a class="small-text" href="">Giới thiệu Tiki Xu</a>
+            <a class="small-text" href="">Bán hàng doanh nghiệp</a>
+          </div>
+          <div class="footer-information-container__corperation">
+            <h4>HỢP TÁC LIÊN KẾT</h4>
+            <a class="small-text" href="">Quy chế hoạt động Sàn GDTMĐT</a>
+            <a class="small-text" href="">Bán hàng cùng Tiki</a>
+          </div>
+          <div class="footer-information-container__payment">
+            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+            <div class="footer-information-container-payment__container">
+              <img src="./ASSET/image/payment1.svg" alt="" />
+              <img src="./ASSET/image/payment2.svg" alt="" />
+              <img src="./ASSET/image/payment3.svg" alt="" />
+              <img src="./ASSET/image/payment4.svg" alt="" />
+              <img src="./ASSET/image/payment5.svg" alt="" />
+              <img src="./ASSET/image/payment6.svg" alt="" />
+            </div>
+          </div>
+          <div class="footer-information-container__link">
+            <div class="footer-information-container-link__social-media">
+              <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+              <div class="footer-information-container-link-social-media__img">
+                <a href=""
+                  ><img
+                    width="32px"
+                    height="32px"
+                    src="./ASSET/image/fb.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    width="32px"
+                    height="32px"
+                    src="./ASSET/image/youtube.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    width="32px"
+                    height="32px"
+                    src="./ASSET/image/zalo.jpg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="footer-information-container-link__app">
+              <h4>TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</h4>
+              <div class="footer-information-container-link-app__container">
+                <a href=""
+                  ><img
+                    width="134px"
+                    height="40px"
+                    src="./ASSET/image/appstore.png"
+                    alt=""
+                /></a>
+
+                <a href=""
+                  ><img
+                    width="134px"
+                    height="40px"
+                    src="./ASSET/image/playstore.png"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__headquarter">
+        <div class="footer-headquarter__container wrapper">
+          <div class="footer-headquarter-container__address">
+            <p class="address-title small-text">
+              <b>Địa chỉ văn phòng:</b> 52 Út Tịch, phường 4, quận Tân Bình,
+              thành phố Hồ Chí Minh
+            </p>
+            <p class="address-text small-text">
+              Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ
+              mua và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn
+              hàng
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy-right">
+        <div class="footer-copy-right__container wrapper">
+          <div class="footer-headquarter-container__information">
+            <h5>© 2016 - Bản quyền của Công Ty Cổ Phần Ti Ki - Tiki.vn</h5>
+            <p>
+              Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và
+              Đầu tư Thành phố Hồ Chí Minh cấp ngày 06/01/2010
+            </p>
+          </div>
+          <div class="footer-copy-right-container__accept">
+            <a class="footer-copy-right-container-accept__img1" href=""
+              ><img
+                width="36px"
+                height="36px"
+                src="./ASSET/image/bocongthuong.png"
+                alt=""
+            /></a>
+            <a class="footer-copy-right-container-accept__img2" href=""
+              ><img
+                width="120px"
+                height="46px"
+                src="./ASSET/image/bocongthuong1.svg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/main.js"></script>
+    <!-----------------------FOOTER END ------------------------>
+  </body>
+</html>
