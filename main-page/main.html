@@ -143,8 +143,32 @@
     <!-----------------------MAIN ------------------------>
     <div id="main">
       <div class="main__banner wrapper">
-        <div class="main-banner__slider">
-          <img src="./ASSET/image/slider1.jpg" alt="" />
+        <div id="main-banner__slideContainer">
+          <div class="slideList">
+            <img class="fadeImg" src="./ASSET/image/slide1.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide2.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide3.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide4.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide5.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide6.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide7.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide8.jpg" alt="" />
+            <img class="fadeImg" src="./ASSET/image/slide9.jpg" alt="" />
+          </div>
+          <div class="circleList">
+            <div class="circle" onclick="slideCircle(1)"></div>
+            <div class="circle" onclick="slideCircle(2)"></div>
+            <div class="circle" onclick="slideCircle(3)"></div>
+            <div class="circle" onclick="slideCircle(4)"></div>
+            <div class="circle" onclick="slideCircle(5)"></div>
+            <div class="circle" onclick="slideCircle(6)"></div>
+            <div class="circle" onclick="slideCircle(7)"></div>
+            <div class="circle" onclick="slideCircle(8)"></div>
+            <div class="circle" onclick="slideCircle(9)"></div>
+          </div>
+         
+          <img class="leftArrow" onclick="slideArrow(-1)" src="./ASSET/image/row1.png"></img>
+          <img class="rightArrow" onclick="slideArrow(1)" src="./ASSET/image/row1.png" ></img>
         </div>
         <div class="main-banner__dis-picture">
           <img src="./ASSET/image/dis-picture.jpg" alt="" />

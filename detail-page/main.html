@@ -34,6 +34,8 @@
                 alt="logo"
             /></a>
           </div>
+          <!-- onmouseover="dropdown()" -->
+          <!-- onmouseout="unDropdown()" -->
           <div class="header__listDropMenu">
             <a href="">
               <div class="header-listDropMenu__menuBtn">
@@ -58,8 +60,107 @@
                   />
                 </p>
               </div>
-              <div class="header-listDropMenu__menuInner"></div>
             </a>
+            <div class="header-listDropMenu__menuInner">
+              <ul>
+                <li>
+                  <a class="menuInner__phone menuLink">
+                    <i class="phoneIcon"></i>
+                    <span>Điện thoại - Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__electric menuLink">
+                    <i class="electricIcon"></i>
+                    <span>Điện tử - Điện lạnh</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__accessory menuLink">
+                    <i class="accessoryIcon"></i>
+                    <span>Phụ kiện - Thiết bị số</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__laptop menuLink">
+                    <i class="laptopIcon"></i>
+                    <span>Laptop - Thiết bị IT</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__camera menuLink">
+                    <i class="cameraIcon"></i>
+                    <span>Máy ảnh - Quay phim</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__machine menuLink">
+                    <i class="machineIcon"></i>
+                    <span>Điện gia dụng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__house menuLink">
+                    <i class="houseIcon"></i>
+                    <span>Nhà cửa đời sống</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__food menuLink">
+                    <i class="foodIcon"></i>
+                    <span>Hàng tiêu dùng - Thực phẩm</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__toy menuLink">
+                    <i class="toyIcon"></i>
+                    <span>Đồ chơi, Mẹ & Bé</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__health menuLink">
+                    <i class="healthIcon"></i>
+                    <span>Làm đẹp - Sức khỏe</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__fashion menuLink">
+                    <i class="fashionIcon"></i>
+                    <span>Thời trang - Phụ kiện</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__sport menuLink">
+                    <i class="sportIcon"></i>
+                    <span>Thể thao - Dã ngoại</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__car menuLink">
+                    <i class="carIcon"></i>
+                    <span>Xe máy, Ô tô, Xe đạp</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__global menuLink">
+                    <i class="globalIcon"></i>
+                    <span>Hàng quốc tế</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__book menuLink">
+                    <i class="bookIcon"></i>
+                    <span>Sách, VPP & Quà tặng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__service menuLink">
+                    <i class="serviceIcon"></i>
+                    <span>Voucher - Dịch vu - Thẻ cào</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="header__searchForm">
             <div class="header-searchForm__input">
@@ -84,8 +185,8 @@
           </div>
         </div>
         <div class="header__userShortcut">
-          <div class="header__accountDropMenu">
-            <div class="header-accountDropMenu__profileIcon">
+          <div class="header__accountSection" onclick="accountDropdown()">
+            <div class="header-accountSection__profileIcon">
               <img
                 width="33px"
                 height="33px"
@@ -107,6 +208,24 @@
                   alt=""
                 />
               </span>
+            </div>
+            <div class="header-accountSection__accountContent">
+              <button class="accountContent__register">Đăng nhập</button>
+              <button class="accountContent__createAccount">
+                Tạo tài khoản
+              </button>
+              <button class="accountContent__fbRegister">
+                <span><i class="fbRegister"></i></span>
+                Đăng nhập bằng Facebook
+              </button>
+              <button class="accountContent__googleRegister">
+                <span><i class="googleRegister"></i></span>
+                Đăng nhập bằng Google
+              </button>
+              <button class="accountContent__zaloRegister">
+                <span><i class="zaloRegister"></i></span>
+                Đăng nhập bằng Zalo
+              </button>
             </div>
           </div>
           <div class="header__cartSection">
@@ -163,7 +282,9 @@
       </div>
       <div class="main__detailProduct wrapper">
         <div
-          class="main-detailProduct__leftSecmain-detailProduct__productImagetion"
+          class="
+            main-detailProduct__leftSecmain-detailProduct__productImagetion
+          "
         >
           <div class="main-detailProduct__productImage">
             <img
@@ -534,44 +655,44 @@
             <table>
               <tbody>
                 <tr>
-                  <td class="first-child">Dung lượng pin</td>
-                  <td class="second-child">4230 mAh</td>
+                  <td class="firstChild">Dung lượng pin</td>
+                  <td class="secondChild">4230 mAh</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Bluetooth</td>
-                  <td class="second-child">A2DP, LE, v5.0</td>
+                  <td class="firstChild">Bluetooth</td>
+                  <td class="secondChild">A2DP, LE, v5.0</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Thương hiệu</td>
-                  <td class="second-child">OPPO</td>
+                  <td class="firstChild">Thương hiệu</td>
+                  <td class="secondChild">OPPO</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Xuất xứ thương hiệu</td>
-                  <td class="second-child">Trung Quốc</td>
+                  <td class="firstChild">Xuất xứ thương hiệu</td>
+                  <td class="secondChild">Trung Quốc</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Camera sau</td>
-                  <td class="second-child">Chính 13 MP & Phụ 2 MP</td>
+                  <td class="firstChild">Camera sau</td>
+                  <td class="secondChild">Chính 13 MP & Phụ 2 MP</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Camera trước</td>
-                  <td class="second-child">5 MP</td>
+                  <td class="firstChild">Camera trước</td>
+                  <td class="secondChild">5 MP</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Hỗ trợ thẻ nhớ ngoài</td>
-                  <td class="second-child">MicroSD</td>
+                  <td class="firstChild">Hỗ trợ thẻ nhớ ngoài</td>
+                  <td class="secondChild">MicroSD</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Chip đồ họa (GPU)</td>
-                  <td class="second-child">PowerVR GE8320</td>
+                  <td class="firstChild">Chip đồ họa (GPU)</td>
+                  <td class="secondChild">PowerVR GE8320</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Chip set</td>
-                  <td class="second-child">MediaTek Helio P35 8 nhân</td>
+                  <td class="firstChild">Chip set</td>
+                  <td class="secondChild">MediaTek Helio P35 8 nhân</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Chức năng khác</td>
-                  <td class="second-child">
+                  <td class="firstChild">Chức năng khác</td>
+                  <td class="secondChild">
                     Đèn pin; Trợ lý ảo Google Assistant; Chặn tin nhắn; Khoá ứng
                     dụng; Nhân bản ứng dụng; Không gian trẻ em ;Đa cửa sổ (chia
                     đôi màn hình); Không gian trò chơi; Ghi âm cuộc gọi; Chặn
@@ -579,100 +700,100 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="first-child">Kết nối khác</td>
-                  <td class="second-child">OTG</td>
+                  <td class="firstChild">Kết nối khác</td>
+                  <td class="secondChild">OTG</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Đèn Flash</td>
-                  <td class="second-child">Có</td>
+                  <td class="firstChild">Đèn Flash</td>
+                  <td class="secondChild">Có</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Kích thước</td>
-                  <td class="second-child">
+                  <td class="firstChild">Kích thước</td>
+                  <td class="secondChild">
                     <p>Dài 155.9 mm - Ngang 75.5 mm - Dày 8.3 mm</p>
                   </td>
                 </tr>
                 <tr>
-                  <td class="first-child">Loại/ Công nghệ màn hình</td>
-                  <td class="second-child">IPS LCD</td>
+                  <td class="firstChild">Loại/ Công nghệ màn hình</td>
+                  <td class="secondChild">IPS LCD</td>
                 </tr>
                 <tr>
-                  <td class="first-child">FM radio</td>
-                  <td class="second-child">Có</td>
+                  <td class="firstChild">FM radio</td>
+                  <td class="secondChild">Có</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Ghi âm</td>
-                  <td class="second-child">Có</td>
+                  <td class="firstChild">Ghi âm</td>
+                  <td class="secondChild">Có</td>
                 </tr>
                 <tr>
-                  <td class="first-child">GPS</td>
-                  <td class="second-child">BDS, A-GPS, GLONASS</td>
+                  <td class="firstChild">GPS</td>
+                  <td class="secondChild">BDS, A-GPS, GLONASS</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Hỗ trợ 4G</td>
-                  <td class="second-child">Có</td>
+                  <td class="firstChild">Hỗ trợ 4G</td>
+                  <td class="secondChild">Có</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Phụ kiện đi kèm</td>
-                  <td class="second-child">Sách HDSD, Sạc</td>
+                  <td class="firstChild">Phụ kiện đi kèm</td>
+                  <td class="secondChild">Sách HDSD, Sạc</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Jack tai nghe</td>
-                  <td class="second-child">3.5 mm</td>
+                  <td class="firstChild">Jack tai nghe</td>
+                  <td class="secondChild">3.5 mm</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Số sim</td>
-                  <td class="second-child">2</td>
+                  <td class="firstChild">Số sim</td>
+                  <td class="secondChild">2</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Loại Sim</td>
-                  <td class="second-child">Nano SIM</td>
+                  <td class="firstChild">Loại Sim</td>
+                  <td class="secondChild">Nano SIM</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Nghe nhạc</td>
-                  <td class="second-child">AMR, MP3, WAV, eAAC+</td>
+                  <td class="firstChild">Nghe nhạc</td>
+                  <td class="secondChild">AMR, MP3, WAV, eAAC+</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Xuất xứ</td>
-                  <td class="second-child">Trung Quốc</td>
+                  <td class="firstChild">Xuất xứ</td>
+                  <td class="secondChild">Trung Quốc</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Cổng sạc</td>
-                  <td class="second-child">Micro USB</td>
+                  <td class="firstChild">Cổng sạc</td>
+                  <td class="secondChild">Micro USB</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Trọng lượng</td>
-                  <td class="second-child">165 g</td>
+                  <td class="firstChild">Trọng lượng</td>
+                  <td class="secondChild">165 g</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Quay phim</td>
-                  <td class="second-child">
+                  <td class="firstChild">Quay phim</td>
+                  <td class="secondChild">
                     Quay phim HD 720p@30fps, Quay phim FullHD 1080p@30fps
                   </td>
                 </tr>
                 <tr>
-                  <td class="first-child">RAM</td>
-                  <td class="second-child">3 GB</td>
+                  <td class="firstChild">RAM</td>
+                  <td class="secondChild">3 GB</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Độ phân giải</td>
-                  <td class="second-child">HD+ (720 x 1520 Pixels)</td>
+                  <td class="firstChild">Độ phân giải</td>
+                  <td class="secondChild">HD+ (720 x 1520 Pixels)</td>
                 </tr>
                 <tr>
-                  <td class="first-child">ROM</td>
-                  <td class="second-child">32 GB</td>
+                  <td class="firstChild">ROM</td>
+                  <td class="secondChild">32 GB</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Kích thước màn hình</td>
-                  <td class="second-child">6.22 inch</td>
+                  <td class="firstChild">Kích thước màn hình</td>
+                  <td class="secondChild">6.22 inch</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Hỗ trợ thẻ tối đa</td>
-                  <td class="second-child">256 GB</td>
+                  <td class="firstChild">Hỗ trợ thẻ tối đa</td>
+                  <td class="secondChild">256 GB</td>
                 </tr>
                 <tr>
-                  <td class="first-child">Tính năng camera</td>
-                  <td class="second-child">
+                  <td class="firstChild">Tính năng camera</td>
+                  <td class="secondChild">
                     A.I Camera, Trôi nhanh thời gian (Time Lapse), Xoá phông,
                     Nhãn dán (AR Stickers), Làm đẹp, Tự động lấy nét (AF), Chạm
                     lấy nét, Nhận diện khuôn mặt, HDR, Toàn cảnh (Panorama),
@@ -680,25 +801,25 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="first-child">Video call</td>
-                  <td class="second-child">
+                  <td class="firstChild">Video call</td>
+                  <td class="secondChild">
                     Hỗ trợ VideoCall thông qua ứng dụng
                   </td>
                 </tr>
                 <tr>
-                  <td class="first-child">Wifi</td>
-                  <td class="second-child">
+                  <td class="firstChild">Wifi</td>
+                  <td class="secondChild">
                     Wi-Fi 802.11 a/b/g/n/ac, Dual-band, DLNA, Wi-Fi Direct,
                     Wi-Fi hotspot
                   </td>
                 </tr>
                 <tr>
-                  <td class="first-child">Xem phim</td>
-                  <td class="second-child">MP4, AVI, WMV, H.264(MPEG4-AVC)</td>
+                  <td class="firstChild">Xem phim</td>
+                  <td class="secondChild">MP4, AVI, WMV, H.264(MPEG4-AVC)</td>
                 </tr>
                 <tr>
-                  <td class="first-child">SKU</td>
-                  <td class="second-child">8020626062208</td>
+                  <td class="firstChild">SKU</td>
+                  <td class="secondChild">8020626062208</td>
                 </tr>
               </tbody>
             </table>
@@ -708,7 +829,7 @@
         <div class="main__productDescription wrapper">
           <h4>MÔ TẢ SẢN PHẨM</h4>
           <div class="main-productDescription__container wrapper">
-            <div class="main-productDescription__content">
+            <div id="main-productDescription__content" class="heightMinus">
               Màn hình: IPS LCD, 6.22", HD+<br />
               Hệ điều hành: ColorOS 6.1 (Android 9.0)<br />
               Camera sau: Chính 13 MP & Phụ 2 MP<br />
@@ -857,7 +978,7 @@
                 phụ phí hàng cồng kềnh, ...
               </p>
             </div>
-            <a class="more-is-seeing" href="">Xem Thêm Nội Dung</a>
+            <a id="moreSeeing" onclick="whatToSeeing()">Xem Thêm Nội Dung</a>
           </div>
         </div>
       </div>
@@ -902,17 +1023,23 @@
 
                   <div class="starLevels-level__processBar">
                     <div
-                      class="productRating-mother-leftSection-starLevels-level-processBar__blur"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__blur
+                      "
                     ></div>
                     <!-- starLevels-level__blurProcessBar -->
                     <div
                       style="width: 80%"
-                      class="productRating-mother-leftSection-starLevels-level-processBar__main"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__main
+                      "
                     ></div>
                     <!-- starLevels-level__mainProcessBar -->
                   </div>
                   <div
-                    class="productRating-mother-leftSection-starLevels-level__number"
+                    class="
+                      productRating-mother-leftSection-starLevels-level__number
+                    "
                   >
                     <!-- starLevels-level__number -->
                     156
@@ -941,15 +1068,21 @@
 
                   <div class="starLevels-level__processBar">
                     <div
-                      class="productRating-mother-leftSection-starLevels-level-processBar__blur"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__blur
+                      "
                     ></div>
                     <div
                       style="width: 20%"
-                      class="productRating-mother-leftSection-starLevels-level-processBar__main"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__main
+                      "
                     ></div>
                   </div>
                   <div
-                    class="productRating-mother-leftSection-starLevels-level__number"
+                    class="
+                      productRating-mother-leftSection-starLevels-level__number
+                    "
                   >
                     33
                   </div>
@@ -977,15 +1110,21 @@
 
                   <div class="starLevels-level__processBar">
                     <div
-                      class="productRating-mother-leftSection-starLevels-level-processBar__blur"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__blur
+                      "
                     ></div>
                     <div
                       style="width: 1%"
-                      class="productRating-mother-leftSection-starLevels-level-processBar__main"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__main
+                      "
                     ></div>
                   </div>
                   <div
-                    class="productRating-mother-leftSection-starLevels-level__number"
+                    class="
+                      productRating-mother-leftSection-starLevels-level__number
+                    "
                   >
                     3
                   </div>
@@ -1013,15 +1152,21 @@
 
                   <div class="starLevels-level__processBar">
                     <div
-                      class="productRating-mother-leftSection-starLevels-level-processBar__blur"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__blur
+                      "
                     ></div>
                     <div
                       style="width: 1%"
-                      class="productRating-mother-leftSection-starLevels-level-processBar__main"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__main
+                      "
                     ></div>
                   </div>
                   <div
-                    class="productRating-mother-leftSection-starLevels-level__number"
+                    class="
+                      productRating-mother-leftSection-starLevels-level__number
+                    "
                   >
                     1
                   </div>
@@ -1049,15 +1194,21 @@
 
                   <div class="starLevels-level__processBar">
                     <div
-                      class="productRating-mother-leftSection-starLevels-level-processBar__blur"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__blur
+                      "
                     ></div>
                     <div
                       style="width: 1%"
-                      class="productRating-mother-leftSection-starLevels-level-processBar__main"
+                      class="
+                        productRating-mother-leftSection-starLevels-level-processBar__main
+                      "
                     ></div>
                   </div>
                   <div
-                    class="productRating-mother-leftSection-starLevels-level__number"
+                    class="
+                      productRating-mother-leftSection-starLevels-level__number
+                    "
                   >
                     3
                   </div>
@@ -1246,580 +1397,6 @@
           />
         </div>
         <div class="main-moreDiscover__productList">
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
-          <div class="moreDiscover-productList__product">
-            <div class="productList__product__productImage">
-              <img
-                width="200px"
-                height="200px"
-                src="./ASSET/image/OPPO-A12.jpg"
-                alt=""
-              />
-            </div>
-            <div class="productList__product__productName">
-              Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-            </div>
-            <div class="productList__product__ratingNumber">
-              <div class="productList__product__rating">
-                <div class="productList__product__grayRating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <div
-                  style="width: 90%"
-                  class="productList__product__yellowRating"
-                >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <div class="productList__product__number">(205)</div>
-            </div>
-            <div class="productList__product__productDisPrice">
-              <p>2.420.000 ₫</p>
-              <span>-19%</span>
-            </div>
-          </div>
           <div class="moreDiscover-productList__product">
             <div class="productList__product__productImage">
               <img

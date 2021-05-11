@@ -220,3 +220,30 @@ for(let i=0;i<10;i=i+1){
   }
   
 }
+// function accountDropdown(){
+//   document.querySelector(".header-listDropMenu__menuInner").classList.toggle("showDisappear");
+// }
+// function dropdown(){
+//   // let dropdownContent=document.getElementsByClassName("header-listDropMenu__menuInner");
+//   document.querySelector(".header-listDropMenu__menuInner").classList.toggle("showDisappear");
+// }
+// function unDropdown(){
+//   // let dropdownContent=document.getElementsByClassName("header-listDropMenu__menuInner");
+//   if (document.querySelector(".header-listDropMenu__menuInner").classList.contains("showDisappear")) {
+//     document.querySelector(".header-listDropMenu__menuInner").classList.remove("showDisappear");
+// }
+// }
+// function btn xem them noi dung, xoa class, thay doi ten noi dung btn
+function whatToSeeing(){
+  let content = document.getElementById("main-productDescription__content");
+  let buttonName = document.getElementById("moreSeeing");
+  if(content.classList.contains("heightMinus")){
+  content.classList.remove("heightMinus");
+  buttonName.innerHTML="Thu gọn nội dung";
+
+}else{ 
+  content.classList.add("heightMinus");
+}
+}
+// or dung content.classList.toggle("heightMinus"))
+// content.style.height = '';

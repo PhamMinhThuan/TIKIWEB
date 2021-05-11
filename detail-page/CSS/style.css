@@ -3,7 +3,6 @@
   font-size: 14px;
   background-color: rgb(239, 239, 239);
 }
-/* le moi ben la 150px */
 .wrapper {
   width: 1236px;
   margin: 0px auto;
@@ -32,17 +31,25 @@
 }
 .header__listDropMenu {
   width: 130px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
 }
 .header__listDropMenu a {
   display: flex;
   flex-flow: row nowrap;
+  height: 43px;
+  align-items: center;
+}
+.header__listDropMenu a:hover ~ .header-listDropMenu__menuInner,
+.header-listDropMenu__menuInner:hover {
+  display: block;
 }
 .header-listDropMenu__menuBtn {
   display: flex;
   align-items: center;
   width: 30px;
 }
-
 .header-listDropMenu__menuContent {
   width: 100px;
   display: flex;
@@ -58,7 +65,162 @@
   font-weight: 700;
   color: rgb(255, 255, 255);
 }
-
+.header-listDropMenu__menuInner {
+  position: absolute;
+  top: calc(100% - 4px);
+  left: -114px;
+  padding-top: 8px;
+  display: none;
+}
+.header-listDropMenu__menuInner ul {
+  position: relative;
+  width: 244px;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  z-index: 99;
+  box-shadow: rgb(0 0 0 / 36%) 0px 4px 24px 0px;
+}
+.menuLink {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  z-index: 99;
+  color: rgb(68, 68, 68);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.menuLink i {
+  margin: 10px;
+  text-align: center;
+}
+.phoneIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px -52px;
+  width: 11px;
+  height: 18px;
+}
+.electricIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -229px -181px;
+  width: 18px;
+  height: 14px;
+}
+.accessoryIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -331px -317px;
+  width: 16px;
+  height: 17px;
+}
+.laptopIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -203px -181px;
+  width: 21px;
+  height: 14px;
+}
+.cameraIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -90px -180px;
+  width: 18px;
+  height: 15px;
+}
+.machineIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -20px -365px;
+  width: 15px;
+  height: 18px;
+}
+.houseIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -333px -275px;
+  width: 24px;
+  height: 14px;
+}
+.foodIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px 0px;
+  width: 12px;
+  height: 21px;
+}
+.toyIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px -26px;
+  width: 10px;
+  height: 21px;
+}
+.healthIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -333px -85px;
+  width: 19px;
+  height: 20px;
+}
+.fashionIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -333px -110px;
+  width: 21px;
+  height: 18px;
+}
+.sportIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -287px -317px;
+  width: 17px;
+  height: 17px;
+}
+.carIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -261px -288px;
+  width: 24px;
+  height: 24px;
+}
+.globalIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -242px -317px;
+  width: 18px;
+  height: 18px;
+}
+.bookIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -21px -340px;
+  width: 16px;
+  height: 18px;
+}
+.serviceIcon {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -128px -255px;
+  width: 24px;
+  height: 24px;
+}
+.header-listDropMenu__menuInner a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: rgb(68, 68, 68);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-decoration: none;
+  height: 100%;
+}
+.header-listDropMenu__menuInner li:hover {
+  background-color: rgb(1, 127, 255);
+  border-color: rgb(1, 127, 255);
+  color: white;
+}
+.header-listDropMenu__menuInner li::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -35px;
+  height: 0px;
+  margin: auto;
+  border-width: 17px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgb(1, 127, 255);
+}
 .header__searchForm {
   display: flex;
   width: 705px;
@@ -70,7 +232,6 @@
   width: 590px;
   height: 40px;
 }
-
 .header-searchForm__searchBtn {
   display: flex;
   flex-flow: row wrap;
@@ -90,34 +251,32 @@
 .header-searchForm__searchBtn img {
   margin-top: 5px;
 }
-
 .header-searchForm__searchBtn span {
   margin-top: 5px;
   margin-left: 5px;
 }
-
 .header__userShortcut {
   display: flex;
   flex-flow: row nowrap;
   width: 290px;
   color: rgb(255, 255, 255);
 }
-
-.header__accountDropMenu {
+.header__accountSection {
   display: flex;
   flex-flow: row nowrap;
+  position: relative;
+  width: 160px;
+  cursor: pointer;
 }
-.header-accountDropMenu__profileIcon img {
+.header-accountSection__profileIcon img {
   margin: 0px 10px 0px 10px;
 }
-
 .header-accountSection__accountSection {
   width: 140px;
   display: flex;
   flex-flow: column nowrap;
   color: rgb(255, 255, 255);
 }
-
 .header-accountSection__logRegister {
   font-size: 11px;
   line-height: 20px;
@@ -131,8 +290,97 @@
 .header-accountSection__account img {
   margin-left: 5px;
 }
+.header-accountSection__accountContent {
+  display: none;
+  flex-flow: column;
+  align-items: center;
+  border: 1px solid rgb(239, 239, 239);
+  background: rgb(255, 255, 255);
+  width: auto;
+  text-align: center;
+  z-index: 99;
+  margin: 0px;
+  padding: 10px;
+  box-shadow: rgb(0 0 0 / 18%) 0px 6px 12px 0px;
+  position: absolute;
+  top: 100%;
+
+  border-radius: 2px;
+}
+.header__accountSection:hover .header-accountSection__accountContent,
+.header-accountSection__accountContent:hover {
+  display: flex;
+}
+.accountContent__register,
+.accountContent__createAccount {
+  color: rgb(74, 74, 74);
+  background: rgb(253, 216, 53);
+  cursor: pointer;
+  outline: none;
+  text-shadow: rgb(171 171 171) 0px 0px 1px;
+}
+.header-accountSection__accountContent button {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 4px;
+  user-select: none;
+  margin: 5px 12px;
+  width: 236px;
+  height: 41px;
+  line-height: 41px;
+  border: none;
+}
+.accountContent__fbRegister span,
+.accountContent__googleRegister span,
+.accountContent__zaloRegister span {
+  float: left;
+  height: 41px;
+  width: 41px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.accountContent__fbRegister span i,
+.accountContent__googleRegister span i,
+.accountContent__zaloRegister span i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.accountContent__fbRegister {
+  background: rgb(59, 89, 152);
+  color: rgb(255, 255, 255);
+}
+.accountContent__googleRegister {
+  background: rgb(223, 74, 50);
+  color: rgb(255, 255, 255);
+}
+.accountContent__zaloRegister {
+  background: rgb(15, 142, 221);
+  color: rgb(255, 255, 255);
+}
+.fbRegister {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -290px -288px;
+  width: 24px;
+  height: 24px;
+}
+.googleRegister {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -29px -288px;
+  width: 24px;
+  height: 24px;
+}
+.zaloRegister {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -240px -72px;
+  width: 25px;
+  height: 25px;
+}
+.header-accountSection__accountContent button:hover {
+  opacity: 0.85;
+}
 .header__cartSection {
   width: 120px;
+  margin-left: 20px;
 }
 .header__cartSection a {
   display: flex;
@@ -160,7 +408,6 @@
   font-weight: 550;
   position: absolute;
 }
-
 .header__bottomSection {
   height: 35px;
   width: 1236px;
@@ -181,7 +428,6 @@
   color: white;
   margin-right: 14px;
 }
-
 /*----------------------- header end------------------------- */
 /*----------------------- main------------------------- */
 #main {
@@ -857,13 +1103,17 @@
   background: rgb(239, 239, 239);
   border-collapse: collapse;
   border-spacing: 0px;
-  border-color: rgb(239, 239, 239);
+  border: 1px solid rgb(239, 239, 239);
 }
 .main-detailInformation__table td {
   padding: 10px 15px;
 }
-
-.second-child {
+.main-detailInformation__table table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+.main-detailInformation__table tr:nth-child(2n) {
+  background-color: rgb(250, 250, 250);
 }
 /*  */
 .main-detailInformation__ad {
@@ -873,7 +1123,7 @@
   margin-bottom: 40px;
 }
 .main-productDescription__container {
-  width: 920px;
+  width: 930px;
   padding: 20px;
   display: inline-block;
   color: rgb(36, 36, 36);
@@ -883,7 +1133,7 @@
   border-radius: 4px;
   position: relative;
 }
-.main-productDescription__content {
+.heightMinus {
   overflow: hidden;
   height: 500px;
 }
@@ -892,32 +1142,32 @@
   margin-bottom: 10px;
   font-size: 20px;
 }
-.main-productDescription__content img {
+#main-productDescription__content img {
   display: block;
   max-width: 100%;
   margin: 0px auto;
 }
-.main-productDescription__content p {
+#main-productDescription__content p {
   margin-top: 5px;
   margin-bottom: 12px;
   margin: 0px 0px 10px;
 }
 
-.more-is-seeing {
+#moreSeeing {
   cursor: pointer;
   display: block;
   width: 229px;
   height: 39px;
   margin: 10px auto 0px;
-  color: rgb(24, 158, 255);
+  color: rgb(13, 92, 182);
   font-size: 14px;
   font-weight: 500;
   line-height: 39px;
   text-align: center;
-  border: 1px solid rgb(66, 149, 209);
+  border: 1px solid rgb(13, 92, 182);
   border-radius: 4px;
 }
-.more-is-seeing:hover {
+#moreSeeing:hover {
   background: rgb(66, 149, 209);
   color: rgb(255, 255, 255);
 }
@@ -1333,7 +1583,6 @@
 }
 
 .main__moreDiscover {
-  height: 1040px;
   background-color: rgb(255, 255, 255);
   margin-bottom: 40px;
   overflow: hidden;
@@ -1420,9 +1669,10 @@
   border-radius: 4px;
   border: 1px solid rgb(13, 92, 182);
   color: rgb(13, 92, 182);
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 600px;
   text-align: center;
-  margin: 0px auto;
+  margin: 15px auto;
 }
 .moreDiscover__moreInf:hover {
   color: rgb(255, 255, 255);
