@@ -23,10 +23,9 @@
   <body>
     <!-----------------------HEADER ------------------------>
     <div id="header">
-      <div class="header__top wrapper">
-        <div class="header-top__left">
-          <!-- header-top__logo -->
-          <div class="header-top-left__logo">
+      <div class="header__topSection wrapper">
+        <div class="header__searchBar">
+          <div class="header__logo">
             <a href=""
               ><img
                 width="60px"
@@ -35,12 +34,9 @@
                 alt="logo"
             /></a>
           </div>
-          <!-- header-top__order -->
-          <div class="header-top-left__order">
-            <!-- header-top-order__list -->
-
-            <a class="header-top-left-order__list" href="">
-              <div class="header-top-left-order-list__menu-btn">
+          <div class="header__listDropMenu">
+            <a href="">
+              <div class="header-listDropMenu__menuBtn">
                 <img
                   width="30px"
                   height="30px"
@@ -48,23 +44,127 @@
                   alt=""
                 />
               </div>
-              <div class="header-top-left-order-list__wrap">
-                <span class="header-top-left-order-list-wrap__1">Danh Mục</span>
-                <span class="header-top-left-order-list-wrap__2">
+              <div class="header-listDropMenu__menuContent">
+                <span>Danh Mục</span>
+
+                <p>
                   Sản Phẩm
+
                   <img
                     width="15px"
                     height="15px"
                     src="./ASSET/image/sort.png"
                     alt=""
                   />
-                </span>
+                </p>
               </div>
             </a>
+            <div class="header-listDropMenu__menuInner">
+              <ul>
+                <li>
+                  <a
+                    class="menuInner__phone menuLink"
+                    href="../order-list-page/main.html"
+                  >
+                    <i class="phoneIcon"></i>
+                    <span>Điện thoại - Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__electric menuLink">
+                    <i class="electricIcon"></i>
+                    <span>Điện tử - Điện lạnh</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__accessory menuLink">
+                    <i class="accessoryIcon"></i>
+                    <span>Phụ kiện - Thiết bị số</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__laptop menuLink">
+                    <i class="laptopIcon"></i>
+                    <span>Laptop - Thiết bị IT</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__camera menuLink">
+                    <i class="cameraIcon"></i>
+                    <span>Máy ảnh - Quay phim</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__machine menuLink">
+                    <i class="machineIcon"></i>
+                    <span>Điện gia dụng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__house menuLink">
+                    <i class="houseIcon"></i>
+                    <span>Nhà cửa đời sống</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__food menuLink">
+                    <i class="foodIcon"></i>
+                    <span>Hàng tiêu dùng - Thực phẩm</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__toy menuLink">
+                    <i class="toyIcon"></i>
+                    <span>Đồ chơi, Mẹ & Bé</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__health menuLink">
+                    <i class="healthIcon"></i>
+                    <span>Làm đẹp - Sức khỏe</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__fashion menuLink">
+                    <i class="fashionIcon"></i>
+                    <span>Thời trang - Phụ kiện</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__sport menuLink">
+                    <i class="sportIcon"></i>
+                    <span>Thể thao - Dã ngoại</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__car menuLink">
+                    <i class="carIcon"></i>
+                    <span>Xe máy, Ô tô, Xe đạp</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__global menuLink">
+                    <i class="globalIcon"></i>
+                    <span>Hàng quốc tế</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__book menuLink">
+                    <i class="bookIcon"></i>
+                    <span>Sách, VPP & Quà tặng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__service menuLink">
+                    <i class="serviceIcon"></i>
+                    <span>Voucher - Dịch vu - Thẻ cào</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <!-- header-top__search -->
-          <div class="header-top-left__search">
-            <div class="header-top-left-search__input">
+          <div class="header__searchForm">
+            <div class="header-searchForm__input">
               <input
                 type="text"
                 name="search"
@@ -72,7 +172,7 @@
                 placeholder="  Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
               />
             </div>
-            <button class="header-top-left-search__btn">
+            <button class="header-searchForm__searchBtn">
               &nbsp
               <img
                 width="20px"
@@ -85,50 +185,73 @@
             </button>
           </div>
         </div>
-        <div class="header-top__right">
-          <div class="header-top-right__personal">
-            <img
-              width="33px"
-              height="33px"
-              class="header-top-right-personal__img"
-              src="./ASSET/image/person.png"
-              alt=""
-            />
-            <div class="header-top-right-personal__account">
-              <a href="">
-                <span class="header-top-right-personal-account__1"
-                  >Đăng Nhập/Đăng Ký</span
-                >
-                <span class="header-top-right-personal-account__2">
-                  <span>Tài khoản</span>
-                  <img
-                    width="15px"
-                    height="15px"
-                    src="./ASSET/image/sort.png"
-                    alt=""
-                  />
-                </span>
-              </a>
+        <div class="header__userShortcut">
+          <div class="header__accountSection" onclick="accountDropdown()">
+            <div class="header-accountSection__profileIcon">
+              <img
+                width="33px"
+                height="33px"
+                src="./ASSET/image/person.png"
+                alt=""
+              />
+            </div>
+
+            <div class="header-accountSection__accountSection">
+              <span class="header-accountSection__logRegister"
+                >Đăng Nhập/Đăng Ký</span
+              >
+              <span class="header-accountSection__account">
+                <span>Tài khoản</span>
+                <img
+                  width="15px"
+                  height="15px"
+                  src="./ASSET/image/sort.png"
+                  alt=""
+                />
+              </span>
+            </div>
+            <div class="header-accountSection__accountContent">
+              <button
+                class="accountContent__register"
+                onclick="registerFormOpen()"
+              >
+                Đăng nhập
+              </button>
+              <button class="accountContent__createAccount">
+                Tạo tài khoản
+              </button>
+              <button class="accountContent__fbRegister">
+                <span><i class="fbRegister"></i></span>
+                Đăng nhập bằng Facebook
+              </button>
+              <button class="accountContent__googleRegister">
+                <span><i class="googleRegister"></i></span>
+                Đăng nhập bằng Google
+              </button>
+              <button class="accountContent__zaloRegister">
+                <span><i class="zaloRegister"></i></span>
+                Đăng nhập bằng Zalo
+              </button>
             </div>
           </div>
-          <div class="header-top-right__cart">
-            <a href="">
-              <div class="header-top-right-cart__img">
+          <div class="header__cartSection">
+            <a class="header-cartSection__cartIcon" href="">
+              <div class="cartIcon__icon">
                 <img
                   width="30px"
                   height="30px"
                   src="./ASSET/image/cart.png"
                   alt=""
                 />
-                <div class="header-top-right-cart-img__number">0</div>
               </div>
+              <div class="cartIcon__number">0</div>
               <span>Giỏ Hàng</span>
             </a>
           </div>
         </div>
       </div>
-      <div class="header__bottom">
-        <div class="header-bottom__nav">
+      <div class="header__bottomSection">
+        <div class="header__quickLinks">
           <a href="">tủ lạnh</a>
           <a href="">giỏ quà tết</a>
           <a href="">sạc dự phòng</a>
@@ -139,6 +262,7 @@
         </div>
       </div>
     </div>
+
     <!-----------------------HEADER END ------------------------>
     <!-----------------------MAIN ------------------------>
     <div id="main">
@@ -170,14 +294,18 @@
           <img class="leftArrow" onclick="slideArrow(-1)" src="./ASSET/image/row1.png"></img>
           <img class="rightArrow" onclick="slideArrow(1)" src="./ASSET/image/row1.png" ></img>
         </div>
-        <div class="main-banner__dis-picture">
+        <div class="main-banner__smallPicture">
           <img src="./ASSET/image/dis-picture.jpg" alt="" />
         </div>
       </div>
-      <div class="main__dis-product wrapper">
-        <div class="main-dis-product__heading">
-          <div class="main-dis-product-heading__text">
+      <div class="main__disProduct wrapper">
+        
+        <div class="main-disProduct__heading">
+         
+   
+          <div class="disProduct-heading__text">
             <img src="./ASSET/image/giasoc.svg" alt="" />
+            <!-- flash__img -->
             <img
               class="main-dis-product-heading-text__flash"
               src="./ASSET/image/flash.gif"
@@ -185,7 +313,8 @@
             />
             <img src="./ASSET/image/homnay.svg" alt="" />
           </div>
-          <div class="main-dis-product-heading__time">
+        
+          <div class="disProduct-heading__countDownTime">
             <span>00</span>
             :
             <span>00</span>
@@ -194,25 +323,42 @@
             <img src="./ASSET/image/row.png" alt="" />
           </div>
         </div>
-        <div class="main-dis-product__content">
-          <div class="main-dis-product-content__row1">
-            <img src="./ASSET/image/row1.png" alt="" />
-          </div>
-          <div id="main-dis-product-content__list"></div>
-          <div class="main-dis-product-content__row2">
-            <img src="./ASSET/image/row1.png" alt="" />
+       
+        <div class="main-disProduct__inner">
+          <div class="disProduct-inner__container">
+             
+            <div class="disProduct-inner__frontArrow" >
+              
+              <img src="./ASSET/image/row1.png" alt="" onclick="stepSlide(-1)" />
+            </div>
+        
+            <div id="disProduct-inner__productList"></div>
+           
+            <!-- chinh sua js -->
+            <div class="disProduct-inner__backArrow" >
+              <!--disProduct-inner__backArrow  -->
+              <img src="./ASSET/image/row1.png" alt="" onclick="stepSlide(1)" />
+            </div>
           </div>
         </div>
       </div>
-      <div id="main__nav-1" class="wrapper"></div>
-      <div id="main__dis-brand" class="wrapper"></div>
-      <div class="main__order-list wrapper">
-        <div class="main-order-list__text">DANH MỤC NỔI BẬT</div>
-        <div id="main-order-list__product"></div>
+      <div id="main__iconSection" class="wrapper"></div>
+      
+     
+      <div id="main__disBrandList" class="wrapper"></div>
+      <div class="main__orderList wrapper">
+        
+        <div class="main-orderList__text">DANH MỤC NỔI BẬT</div>
+        
+        <div id="main-orderList__item"></div>
+     
       </div>
-      <div class="main__search wrapper">
-        <div class="main-search__text">
-          <div class="main-search-text__left">
+      <div class="main__searchSection wrapper">
+      
+        <div class="main-searchSection__heading">
+         
+          <div class="searchSection-heading__icon">
+            
             <img
               width="24px"
               height="24px"
@@ -221,7 +367,8 @@
             />
             <span>TÌM KIẾM NỔI BẬT</span>
           </div>
-          <div class="main-search-text__right">
+          <div class="searchSection-heading__text">
+            
             <img
               width="24px"
               height="24px"
@@ -231,14 +378,21 @@
             <span>XEM THÊM</span>
           </div>
         </div>
-        <div id="main-search__group"></div>
+        <div id="main__searchSection"></div>
+        
       </div>
-      <div id="main__dis-deal" class="wrapper"></div>
-      <div class="main__product-list wrapper">
-        <div class="main-product-list__header">
-          <div class="main-product-list-header__first">
-            <div class="main-product-list-header-first__wrapper">
-              <div class="main-product-list-header-first-wrapper__content">
+      <div id="main__disDeal" class="wrapper"></div>
+      
+      <div class="main__productList wrapper">
+       
+        <div class="main-productList__heading">
+          
+          <div class="productList-heading__firstSection">
+           
+            <div class="productList-firstSection__container">
+              
+              <div class="productList-firstSection__firstImage">
+                
                 <img
                   width="120px"
                   height="40px"
@@ -248,9 +402,12 @@
               </div>
             </div>
           </div>
-          <div class="main-product-list-header__second">
-            <div class="main-product-list-header-second__wrapper">
-              <div class="main-product-list-header-second-wrapper__content">
+          <div class="productList-heading__secondSection">
+           
+            <div class="productList-secondSection__container">
+               
+               
+              <div class="productList-secondSection__secondImage">
                 <img
                   width="120px"
                   height="40px"
@@ -260,9 +417,11 @@
               </div>
             </div>
           </div>
-          <div class="main-product-list-header__third">
-            <div class="main-product-list-header-third__wrapper">
-              <div class="main-product-list-header-third-wrapper__content">
+          <div class="productList-heading__thirdSection">
+            
+            <div class="productList-thirdSection__container">
+
+              <div class="productList-secondSection__thirdImage">
                 <img
                   width="120px"
                   height="40px"
@@ -273,9 +432,11 @@
             </div>
           </div>
         </div>
-        <div class="main-product-list__container">
-          <div id="main-product-list-container__main"></div>
-          <a class="main-product-list-container__more">Xem Thêm</a>
+        <div class="main-productList__container">
+          
+          <div id="main-productList__innerSection" class="toggle"></div>
+        
+          <a id="main-productList__moreButton">Xem Thêm</a>
         </div>
       </div>
     </div>
@@ -292,6 +453,7 @@
               src="./ASSET/image/gmail.png"
               alt=""
             />
+            
           </div>
           <div class="footer-mail-register-container__new-letter">
             <h3>Đăng ký nhận bản tin Tiki</h3>
@@ -448,7 +610,66 @@
         </div>
       </div>
     </div>
-    <script src="./JS/main.js"></script>
+
     <!-----------------------FOOTER END ------------------------>
+    <div id="bottom">
+      <div class="bottomForm">
+        <div class="bottomForm__Container">
+          <button class="bottomForm__btn" onclick="registerFormClose()">
+            <img src="./ASSET/image/x-img.png" alt="" />
+          </button>
+          <div class="bottomForm__left">
+            <div class="bottomForm-left__container">
+              <div class="bottomForm-left__head">
+                <h4>Đăng nhập bằng email</h4>
+                <p>Nhập email và mật khẩu tài khoản Tiki</p>
+              </div>
+              <form class="bottomForm-left__form">
+                <div class="input">
+                  <input
+                    type="email"
+                    name="email"
+                    id="registerEmail"
+                    placeholder="acb@email.com"
+                    value=""
+                  />
+                </div>
+                <div class="input">
+                  <input
+                    type="password"
+                    name="password"
+                    id="registerPassword"
+                    placeholder="Mật khẩu"
+                    value=""
+                  />
+                  <span class="showPass">Hiện</span>
+                </div>
+                <button class="login" onclick="validate()">Đăng nhập</button>
+              </form>
+              <p class="forgotPass">Quên mật khẩu?</p>
+              <p class="creatAccount">
+                Chưa có tài khoản?
+                <span>Tạo tài khoản</span>
+              </p>
+            </div>
+          </div>
+          <div class="bottomForm__right">
+            <img
+              src="./ASSET/image/right-background-form.png"
+              alt=""
+              width="203px"
+            />
+            <div class="bottomForm-right__content">
+              <h4>Mua sắm tại Tiki</h4>
+              <span>Siêu ưu đãi mỗi ngày</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
+
   </body>
 </html>

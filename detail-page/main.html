@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./CSS/form.css" />
     <link rel="stylesheet" href="./CSS/reset.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -34,8 +33,6 @@
                 alt="logo"
             /></a>
           </div>
-          <!-- onmouseover="dropdown()" -->
-          <!-- onmouseout="unDropdown()" -->
           <div class="header__listDropMenu">
             <a href="">
               <div class="header-listDropMenu__menuBtn">
@@ -64,7 +61,10 @@
             <div class="header-listDropMenu__menuInner">
               <ul>
                 <li>
-                  <a class="menuInner__phone menuLink">
+                  <a
+                    class="menuInner__phone menuLink"
+                    href="../order-list-page/main.html"
+                  >
                     <i class="phoneIcon"></i>
                     <span>Điện thoại - Máy tính bảng</span>
                   </a>
@@ -210,7 +210,12 @@
               </span>
             </div>
             <div class="header-accountSection__accountContent">
-              <button class="accountContent__register">Đăng nhập</button>
+              <button
+                class="accountContent__register"
+                onclick="registerFormOpen()"
+              >
+                Đăng nhập
+              </button>
               <button class="accountContent__createAccount">
                 Tạo tài khoản
               </button>
@@ -594,20 +599,23 @@
       </div>
       <div class="main__parrityProduct wrapper">
         <h4>SẢN PHẨM TƯƠNG TỰ</h4>
-        <div class="main-parrityProduct__containert wrapper">
-          <a class="arrow-front" href=""></a>
-
-          <div class="main-parrityProduct__productList">
-            <a href="">
+        <div class="main-parrityProduct__container wrapper">
+          <a class="parrityProduct__arrowFront" onclick="stepSlide(-1)">
+            <span class="arrowFront">
+              <i class="arrowFrontIcon"></i>
+            </span>
+          </a>
+          <div id="main-parrityProduct__productList">
+            <!-- <a href="">
               <div class="productList__productImage">
                 <img
                   width="200px"
                   height="200px"
-                  src="./ASSET/image/OPPO-A12.jpg"
+                  src="./ASSET/image/redmi9.jpg"
                   alt=""
                 />
               </div>
-              <div class="productList__productContent">
+              <div class="productList__product Content">
                 <div class="productList-productContent__productName">
                   Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
                 </div>
@@ -621,7 +629,7 @@
                       <i class="fas fa-star"></i>
                     </div>
                     <div
-                      style="width: 80%"
+                      style="width: 60%"
                       class="productList-productRating__yellowStar"
                     >
                       <i class="fas fa-star"></i>
@@ -643,9 +651,13 @@
                   2.990.000 ₫
                 </div>
               </div>
-            </a>
+            </a> -->
           </div>
-          <a href="" class="arrow-back"></a>
+          <a class="parrityProduct__arrowBack" onclick="stepSlide(1)">
+            <span class="arrowBack">
+              <i class="arrowBackIcon"></i>
+            </span>
+          </a>
         </div>
       </div>
       <div class="main__detailInformation wrapper">
@@ -1613,11 +1625,62 @@
         </div>
       </div>
     </div>
-    <script src="./JS/main.js"></script>
-
     <!-----------------------FOOTER END ------------------------>
+    <div id="bottom">
+      <div class="bottomForm">
+        <div class="bottomForm__Container">
+          <button class="bottomForm__btn" onclick="registerFormClose()">
+            <img src="./ASSET/image/x-img.png" alt="" />
+          </button>
+          <div class="bottomForm__left">
+            <div class="bottomForm-left__container">
+              <div class="bottomForm-left__head">
+                <h4>Đăng nhập bằng email</h4>
+                <p>Nhập email và mật khẩu tài khoản Tiki</p>
+              </div>
+              <form class="bottomForm-left__form">
+                <div class="input">
+                  <input
+                    type="email"
+                    name="email"
+                    id="registerEmail"
+                    placeholder="acb@email.com"
+                    value=""
+                  />
+                </div>
+                <div class="input">
+                  <input
+                    type="password"
+                    name="password"
+                    id="registerPassword"
+                    placeholder="Mật khẩu"
+                    value=""
+                  />
+                  <span class="showPass">Hiện</span>
+                </div>
+                <button class="login" onclick="validate()">Đăng nhập</button>
+              </form>
+              <p class="forgotPass">Quên mật khẩu?</p>
+              <p class="creatAccount">
+                Chưa có tài khoản?
+                <span>Tạo tài khoản</span>
+              </p>
+            </div>
+          </div>
+          <div class="bottomForm__right">
+            <img
+              src="./ASSET/image/right-background-form.png"
+              alt=""
+              width="203px"
+            />
+            <div class="bottomForm-right__content">
+              <h4>Mua sắm tại Tiki</h4>
+              <span>Siêu ưu đãi mỗi ngày</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/main.js"></script>
   </body>
 </html>
-
-<!--  -->
-<!-- <button id="` + idproduct + `" onclick="loadSp(" idproduct  + ")"></button> -->

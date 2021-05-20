@@ -1,4 +1,4 @@
-//slideShow
+//slideShow section function
 let slideIndex = 1;
 window.onload = setInterval(() => {
   showSlides((slideIndex += 1));
@@ -31,63 +31,126 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-
-//list item
+// disproduct Section function
+let stepNumber = 0;
+function stepSlide(n){
+arrowRun(stepNumber+=n);
+}   
+function arrowRun(m){
+let step = document.getElementById("disProduct-inner__productList");
+  if ((m > 2)||(m < 0) ){
+  }else{
+  let sum = 0;
+  sum = -1236*m;
+  step.style.marginLeft=sum+"px";
+  }
+}
+//listItem
   productItem=[
     {
-     image: "dis-product1.jpg",
-     sale: "38%",
-     price: "99.000 đ",
-     progress: "75%",
-     amount: "15"
+     image: "OPPO-A12.jpg",
+     sale: "19%",
+     price: " 2.420.000 ₫",
+     progress: "90%",
+     amount: "194"
    },
    {
-    image: "dis-product1.jpg",
-    sale: "38%",
-    price: "99.000 đ",
+    image: "redmi9.jpg",
+    sale: "19%",
+    price: " 2.890.000 ₫",
     progress: "75%",
-    amount: "15"
+    amount: "96"
   },
   {
-    image: "dis-product1.jpg",
-    sale: "38%",
-    price: "99.000 đ",
-    progress: "75%",
-    amount: "15"
+    image: "OPPO-A12.jpg",
+    sale: "19%",
+    price: " 2.420.000 ₫",
+    progress: "90%",
+    amount: "194"
   },
   {
-    image: "dis-product1.jpg",
-    sale: "38%",
-    price: "99.000 đ",
-    progress: "75%",
-    amount: "15"
+   image: "redmi9.jpg",
+   sale: "19%",
+   price: " 2.890.000 ₫",
+   progress: "75%",
+   amount: "96"
   },
   {
-    image: "dis-product1.jpg",
-    sale: "38%",
-    price: "99.000 đ",
-    progress: "75%",
-    amount: "15"
-  }
-]
+   image: "OPPO-A12.jpg",
+   sale: "19%",
+   price: " 2.420.000 ₫",
+   progress: "90%",
+   amount: "194"
+ },
+ {
+  image: "redmi9.jpg",
+  sale: "19%",
+  price: " 2.890.000 ₫",
+  progress: "75%",
+  amount: "96"
+ },
+ {
+   image: "OPPO-A12.jpg",
+   sale: "19%",
+   price: " 2.420.000 ₫",
+   progress: "90%",
+   amount: "194"
+ },
+ {
+  image: "redmi9.jpg",
+  sale: "19%",
+  price: " 2.890.000 ₫",
+  progress: "75%",
+  amount: "96"
+ },
+ {
+   image: "OPPO-A12.jpg",
+   sale: "19%",
+   price: " 2.420.000 ₫",
+   progress: "90%",
+   amount: "194"
+ },
+ {
+  image: "redmi9.jpg",
+  sale: "19%",
+  price: " 2.890.000 ₫",
+  progress: "75%",
+  amount: "96"
+ },
+ {
+  image: "OPPO-A12.jpg",
+  sale: "19%",
+  price: " 2.420.000 ₫",
+  progress: "90%",
+  amount: "194"
+},
+{
+ image: "redmi9.jpg",
+ sale: "19%",
+ price: " 2.890.000 ₫",
+ progress: "75%",
+ amount: "96"
+}
+ ]
   function addDisProduct(image, sale, price, progress, amount){
-    document.getElementById("main-dis-product-content__list").innerHTML+=`
-    <a class="main-dis-product-content-list__item" href="">
-    <div class="main-dis-product-content-list-item__img">
+    document.getElementById("disProduct-inner__productList").innerHTML+=`
+    <a href="">
+    
+    <div class="productList__imageSecton">
       <img 
       width= "192px"
       height= "192px" 
       src="./ASSET/image/`+image+`" alt="" />
-      <div class="main-dis-product-content-list-item-img__number">
+      <div class="productList-imageSecton__number">
         `+sale+`
       </div>
     </div>
-    <div class="main-dis-product-content-list-item__price">
+    <div class="productList__price">
       `+price+`
     </div>
-    <div class="main-dis-product-content-list-item__amount">
+    <div class="productList__amount">
       <div
-        class="main-dis-product-content-list-item-amount__progress"
+        class="productList-amount__progress"
         style="width: `+progress+`"
       ></div>
       <span>Đã bán `+amount+`</span>
@@ -102,6 +165,8 @@ function showSlides(n) {
 //-------------------------------break-----------------------
 
 //max key: 10 do dinh huong css width co dinh, neu se tu dong nhay xuong hang khac
+// Icon section
+
 navItem=[
   {
    image: "nav1.png",
@@ -144,8 +209,9 @@ navItem=[
   content: "Ưu đãi đối tác",
 }
 ]
+
 function addNav(image, content){
-document.getElementById("main__nav-1").innerHTML+=`
+document.getElementById("main__iconSection").innerHTML+=`
 <a href="">
 <img 
 width= "48px"
@@ -160,7 +226,7 @@ for(Item of navItem){
 }
 
 //-------------------------------break-----------------------
-
+// disBrandList section
 brandItem=[
   {
    image: "dis-brand1.jpg",
@@ -175,8 +241,9 @@ brandItem=[
   image: "dis-brand4.jpg",
 }
 ]
+
 function addBrand(image){
-  document.getElementById("main__dis-brand").innerHTML+=`
+  document.getElementById("main__disBrandList").innerHTML+=`
   <a href="">
   <img src="./ASSET/image/`+image+`" alt="" />
   </a>
@@ -189,7 +256,7 @@ for(Item of brandItem){
 
 //-------------------------------break-----------------------
 
-//DANH MUC NOI BAT
+//orderList section
 listItem=[
   {
    image: "order-list1.jpg",
@@ -232,8 +299,9 @@ listItem=[
   content: "Đồ dùng nhà bếp"
 }
 ]
+
 function addList(image, content){
-  document.getElementById("main-order-list__product").innerHTML+=`
+  document.getElementById("main-orderList__item").innerHTML+=`
   <a href="">
   <img 
   width= "60px"
@@ -249,7 +317,7 @@ function addList(image, content){
 
 //-------------------------------break-----------------------
 
-//Tim kiem noi bat
+//SearchSection 
 imageItem=[
   {
    image1: "search-group11.jpg",
@@ -284,10 +352,16 @@ imageItem=[
   amount: "960 sản phẩm"
 }
 ]
+// main__searchSection
+// main__searchSection__imageGroup
+// main__searchSection__contentSection
+// contentSection__title
+// contentSection__subTitle
+
 function addImage(image1, image2, image3, color, content, amount){
-  document.getElementById("main-search__group").innerHTML+=`
+  document.getElementById("main__searchSection").innerHTML+=`
   <a href="">
-    <div class="main-search-group__picture">
+    <div class="main__searchSection__imageGroup">
       <img width="86px" 
       height="86px" src="./ASSET/image/`+image1+`" alt="" />
       <img width="86px" 
@@ -295,9 +369,9 @@ function addImage(image1, image2, image3, color, content, amount){
       <img width="86px" 
       height="86px" src="./ASSET/image/`+image3+`" alt="" />
     </div>
-    <div class="main-search-group__content" style="background-color: `+color+`">
-      <span class="main-search-group-content__title">`+content+`</span>
-      <span class="main-search-group-content__sub-title">`+amount+`</span>
+    <div class="main__searchSection__contentSection" style="background-color: `+color+`">
+      <span class="contentSection__title">`+content+`</span>
+      <span class="contentSection__subTitle">`+amount+`</span>
     </div>
   </a>
 `
@@ -309,7 +383,7 @@ function addImage(image1, image2, image3, color, content, amount){
 
 //-------------------------------break-----------------------
 
-//deal
+//Disdeal Section
 dealItem=[
   {
    image: "dis-deal1.jpg"
@@ -321,8 +395,9 @@ dealItem=[
   image: "dis-deal3.jpg"
 }
 ]
+
 function addDeal(image){
-  document.getElementById("main__dis-deal").innerHTML+=`
+  document.getElementById("main__disDeal").innerHTML+=`
   <a href=""><img src="./ASSET/image/`+image+`" alt="" /></a>
   `
   }
@@ -332,20 +407,406 @@ function addDeal(image){
 
 //-------------------------------break-----------------------
 
-//list product
+//ProductList section
+sumOfProduct=[
+  {
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+},
+{
+ link: "goigel.jpg",
+ name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+ rating: "80%",
+ rate_amount: 50,
+ price:  "339.000 đ",
+ dis_price: "-42%"
+},
+{
+ link: "nemvanthanh.jpg",
+ name:"Nệm cao su Vạn Thành Standard chính hãng",
+ rating: "90%",
+ rate_amount: 20,
+ price:  "3.760.000 đ",
+ dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},  
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},
+{
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+},  {
+  link: "OPPO-A12.jpg",
+  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+  rating: "80%",
+  rate_amount: 194,
+  price:  "2.420.000 ₫",
+  dis_price: "-19%"
+},
+{
+  link: "redmi9.jpg",
+  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+  rating: "100%",
+  rate_amount: 96,
+  price:  " 2.890.000 ₫",
+  dis_price: "-19%"
+},
+{
+link: "goigel.jpg",
+name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
+rating: "80%",
+rate_amount: 50,
+price:  "339.000 đ",
+dis_price: "-42%"
+},
+{
+link: "nemvanthanh.jpg",
+name:"Nệm cao su Vạn Thành Standard chính hãng",
+rating: "90%",
+rate_amount: 20,
+price:  "3.760.000 đ",
+dis_price: "-27%"
+}
+]
+
 function addProduct(link, name, rating, rate_amount, price, dis_price){
-    document.getElementById("main-product-list-container__main").innerHTML+=`
+    document.getElementById("main-productList__innerSection").innerHTML+=`
     <a href="">
-    <div class="main-product-list-container__main-img">
-      <img src="`+link+`" alt="" />
+    <div class="productList-innerSection__imageSection">
+      <img src="./ASSET/image/`+link+`" alt="" />
     </div>
-    <div class="main-product-list-container__main-name">
+    <div class="productList-innerSection__nameSection">
     `+name+`
     </div>
-    <div class="main-product-list-container__main-review">
-    <div class="main-product-list-container-main-review__rating">
+    <div class="productList-innerSection__reviewSection">
+    <div class="productList-reviewSection__ratingSection">
       <div
-        class="main-product-list-container-main-review-rating__rating-total"
+        class="productList-ratingSection__ratingTotal"
       >
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -355,7 +816,7 @@ function addProduct(link, name, rating, rate_amount, price, dis_price){
       </div>
       <div
         style="width: `+rating+`"
-        class="main-product-list-container-main-review-rating__rating-average"
+        class="productList-ratingSection__ratingAverage"
       >
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -364,63 +825,57 @@ function addProduct(link, name, rating, rate_amount, price, dis_price){
         <i class="fas fa-star"></i>
       </div>
     </div>
-    <div class="main-product-list-container-main-review__amount">
+    <div class="productList-reviewSection__amountSection">
       (`+rate_amount+`)
     </div>
   </div>
-<div class="main-product-list-container__main-price">
-      <div class="main-product-list-container-main-price__1">
+<div class="productList-reviewSection__priceSection">
+      <div class="productList-priceSection__mainPrice">
       `+price+`
       </div>
-      <div class="main-product-list-container-main-price__2"> `+dis_price+`</div>
+      <div class="productList-priceSection__disPrice"> `+dis_price+`</div>
     </div>
   </a>
 `
 }
-sumOfProduct=[
-   {
-    link: "https://salt.tikicdn.com/cache/280x280/ts/product/d0/e7/12/419d762bb926faa89c6140dd99d01638.jpg",
-    name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-    rating: "80%",
-    rate_amount: 50,
-    price:  "339.000 đ",
-    dis_price: "-42%"
-  },
-  {
-    link: "https://salt.tikicdn.com/cache/280x280/ts/product/88/0a/da/e7ca449c225fb0944d6df8b33e244fcf.jpg",
-    name:"Nệm cao su Vạn Thành Standard chính hãng",
-    rating: "90%",
-    rate_amount: 20,
-    price:  "3.760.000 đ",
-    dis_price: "-27%"
-},
-{
-  link: "https://salt.tikicdn.com/cache/280x280/ts/product/d0/e7/12/419d762bb926faa89c6140dd99d01638.jpg",
-  name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-  rating: "80%",
-  rate_amount: 50,
-  price:  "339.000 đ",
-  dis_price: "-42%"
-},
-{
-  link: "https://salt.tikicdn.com/cache/280x280/ts/product/88/0a/da/e7ca449c225fb0944d6df8b33e244fcf.jpg",
-  name:"Nệm cao su Vạn Thành Standard chính hãng",
-  rating: "90%",
-  rate_amount: 20,
-  price:  "3.760.000 đ",
-  dis_price: "-27%"
-}
-
-]
-    for (let product of sumOfProduct){
-      
-      addProduct(product.link, product.name, product.rating, product.rate_amount, product.price, product.dis_price)
-      }
+for (let product of sumOfProduct){
   
-            // for(let i=0; i<2; i++){
-              
-            //   addProduct(sumOfProduct[i].link, sumOfProduct[i].name, sumOfProduct[i].price, sumOfProduct[i].dis_price)
-            // }
+  addProduct(product.link, product.name, product.rating, product.rate_amount, product.price, product.dis_price)
+  }
+      
+// function moreInformation button
+document.getElementById("main-productList__moreButton").addEventListener("click", toggleButton)
+  function toggleButton(){
+    let innerSection = document.getElementById("main-productList__innerSection");
+    if(innerSection.classList.contains("toggle")){
+      innerSection.classList.remove("toggle");
+    } else {
+      innerSection.classList.add("toggle");
+    }
+  }
+// FUNCTION OPEN ĐĂNG NHẬP
+function registerFormOpen(){
+  let form = document.getElementById("bottom");
+  form.style.display="block";
+}
+// FUNCTION CLOSE ĐĂNG NHẬP
+function registerFormClose(){
+  let form = document.getElementById("bottom");
+  form.style.display="none";
+}
+// FUNCTION ĐĂNG NHẬP
+          function validate(){
+             var email = document.getElementById("registerEmail").value;
+             var password = document.getElementById("registerPassword").value;
+             console.log(email);
+             console.log(password);
+            if((email=="USERNAME@gmail.com")&&(password=="123456")){
+              alert("Chúc mừng ban, đăng nhập thành công!");
+
+            }else{
+              alert("Bạn nhập sai tên đăng nhập hoặc mật khẩu");
+          }
+        }
 
 
 

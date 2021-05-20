@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./CSS/form.css" />
     <link rel="stylesheet" href="./CSS/reset.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -23,9 +22,9 @@
   <body>
     <!-----------------------HEADER ------------------------>
     <div id="header">
-      <div class="header__top wrapper">
-        <div class="header-top__left">
-          <div class="header-top-left__logo">
+      <div class="header__topSection wrapper">
+        <div class="header__searchBar">
+          <div class="header__logo">
             <a href=""
               ><img
                 width="60px"
@@ -34,9 +33,9 @@
                 alt="logo"
             /></a>
           </div>
-          <div class="header-top-left__order">
+          <div class="header__listDropMenu">
             <a href="">
-              <div class="header-top-left-order__menu-btn">
+              <div class="header-listDropMenu__menuBtn">
                 <img
                   width="30px"
                   height="30px"
@@ -44,22 +43,127 @@
                   alt=""
                 />
               </div>
-              <div class="header-top-left-order__wrap">
-                <span class="header-top-left-order-wrap__1">Danh Mục</span>
-                <span class="header-top-left-order-wrap__2">
+              <div class="header-listDropMenu__menuContent">
+                <span>Danh Mục</span>
+
+                <p>
                   Sản Phẩm
+
                   <img
                     width="15px"
                     height="15px"
                     src="./ASSET/image/sort.png"
                     alt=""
                   />
-                </span>
+                </p>
               </div>
             </a>
+            <div class="header-listDropMenu__menuInner">
+              <ul>
+                <li>
+                  <a
+                    class="menuInner__phone menuLink"
+                    href="../order-list-page/main.html"
+                  >
+                    <i class="phoneIcon"></i>
+                    <span>Điện thoại - Máy tính bảng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__electric menuLink">
+                    <i class="electricIcon"></i>
+                    <span>Điện tử - Điện lạnh</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__accessory menuLink">
+                    <i class="accessoryIcon"></i>
+                    <span>Phụ kiện - Thiết bị số</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__laptop menuLink">
+                    <i class="laptopIcon"></i>
+                    <span>Laptop - Thiết bị IT</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__camera menuLink">
+                    <i class="cameraIcon"></i>
+                    <span>Máy ảnh - Quay phim</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__machine menuLink">
+                    <i class="machineIcon"></i>
+                    <span>Điện gia dụng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__house menuLink">
+                    <i class="houseIcon"></i>
+                    <span>Nhà cửa đời sống</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__food menuLink">
+                    <i class="foodIcon"></i>
+                    <span>Hàng tiêu dùng - Thực phẩm</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__toy menuLink">
+                    <i class="toyIcon"></i>
+                    <span>Đồ chơi, Mẹ & Bé</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__health menuLink">
+                    <i class="healthIcon"></i>
+                    <span>Làm đẹp - Sức khỏe</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__fashion menuLink">
+                    <i class="fashionIcon"></i>
+                    <span>Thời trang - Phụ kiện</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__sport menuLink">
+                    <i class="sportIcon"></i>
+                    <span>Thể thao - Dã ngoại</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__car menuLink">
+                    <i class="carIcon"></i>
+                    <span>Xe máy, Ô tô, Xe đạp</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__global menuLink">
+                    <i class="globalIcon"></i>
+                    <span>Hàng quốc tế</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__book menuLink">
+                    <i class="bookIcon"></i>
+                    <span>Sách, VPP & Quà tặng</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="menuInner__service menuLink">
+                    <i class="serviceIcon"></i>
+                    <span>Voucher - Dịch vu - Thẻ cào</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="header-top-left__search">
-            <div class="header-top-left-search__input">
+          <div class="header__searchForm">
+            <div class="header-searchForm__input">
               <input
                 type="text"
                 name="search"
@@ -67,7 +171,7 @@
                 placeholder="  Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
               />
             </div>
-            <button class="header-top-left-search__btn">
+            <button class="header-searchForm__searchBtn">
               &nbsp
               <img
                 width="20px"
@@ -80,50 +184,73 @@
             </button>
           </div>
         </div>
-        <div class="header-top__right">
-          <div class="header-top-right__personal">
-            <img
-              width="33px"
-              height="33px"
-              class="header-top-right-personal__img"
-              src="./ASSET/image/person.png"
-              alt=""
-            />
-            <div class="header-top-right-personal__account">
-              <a href="">
-                <span class="header-top-right-personal-account__1"
-                  >Đăng Nhập/Đăng Ký</span
-                >
-                <span class="header-top-right-personal-account__2">
-                  <span>Tài khoản</span>
-                  <img
-                    width="15px"
-                    height="15px"
-                    src="./ASSET/image/sort.png"
-                    alt=""
-                  />
-                </span>
-              </a>
+        <div class="header__userShortcut">
+          <div class="header__accountSection" onclick="accountDropdown()">
+            <div class="header-accountSection__profileIcon">
+              <img
+                width="33px"
+                height="33px"
+                src="./ASSET/image/person.png"
+                alt=""
+              />
+            </div>
+
+            <div class="header-accountSection__accountSection">
+              <span class="header-accountSection__logRegister"
+                >Đăng Nhập/Đăng Ký</span
+              >
+              <span class="header-accountSection__account">
+                <span>Tài khoản</span>
+                <img
+                  width="15px"
+                  height="15px"
+                  src="./ASSET/image/sort.png"
+                  alt=""
+                />
+              </span>
+            </div>
+            <div class="header-accountSection__accountContent">
+              <button
+                class="accountContent__register"
+                onclick="registerFormOpen()"
+              >
+                Đăng nhập
+              </button>
+              <button class="accountContent__createAccount">
+                Tạo tài khoản
+              </button>
+              <button class="accountContent__fbRegister">
+                <span><i class="fbRegister"></i></span>
+                Đăng nhập bằng Facebook
+              </button>
+              <button class="accountContent__googleRegister">
+                <span><i class="googleRegister"></i></span>
+                Đăng nhập bằng Google
+              </button>
+              <button class="accountContent__zaloRegister">
+                <span><i class="zaloRegister"></i></span>
+                Đăng nhập bằng Zalo
+              </button>
             </div>
           </div>
-          <div class="header-top-right__cart">
-            <a href="">
-              <div class="header-top-right-cart__img">
+          <div class="header__cartSection">
+            <a class="header-cartSection__cartIcon" href="">
+              <div class="cartIcon__icon">
                 <img
                   width="30px"
                   height="30px"
                   src="./ASSET/image/cart.png"
                   alt=""
                 />
-                <div class="header-top-right-cart-img__number">0</div>
               </div>
+              <div class="cartIcon__number">0</div>
               <span>Giỏ Hàng</span>
             </a>
           </div>
         </div>
       </div>
-      <div class="header__bottom">
-        <div class="header-bottom__nav">
+      <div class="header__bottomSection">
+        <div class="header__quickLinks">
           <a href="">tủ lạnh</a>
           <a href="">giỏ quà tết</a>
           <a href="">sạc dự phòng</a>
@@ -134,30 +261,25 @@
         </div>
       </div>
     </div>
+
     <!-----------------------HEADER END ------------------------>
     <!-----------------------MAIN --------------------------->
     <div id="main">
-      <div class="main_first-bar">
-        <!-- main__firstBar -->
-        <div class="main_first-bar_container wrapper">
-          <!-- main-firstBar__container -->
-          <a class="main-page" href="../main-page/main.html">Trang chủ </a>
-          <!-- firstBar__mainPage -->
-          <!-- firstBar__listPhone -->
-          <a class="list-phone" href="./main.html">
+      <div class="main__firstBar">
+        <div class="main-firstBar__container wrapper">
+          <a class="firstBar__mainPage" href="../main-page/main.html"
+            >Trang chủ
+          </a>
+          <a class="firstBar__listPhone" href="./main.html">
             Điện Thoại - Máy Tính Bảng
           </a>
         </div>
       </div>
-      <div class="main_content wrapper">
-        <!-- main__contentSection -->
-        <div class="main_content-sidebar">
-          <!-- main-contentSection__sidebar -->
-          <div class="main_content-sidebar_order-list">
-            <!-- sidebar__orderList -->
+      <div class="main__contentSection wrapper">
+        <div class="main-contentSection__sidebar">
+          <div class="sidebar__orderList">
             <h4>DANH MỤC SẢN PHẨM</h4>
-            <div class="main_content-sidebar_order-list_container">
-              <!-- sidebar-orderList__container -->
+            <div class="sidebar-orderList__container">
               <a href="">Điện thoại Smartphone</a>
               <a href="">Điện thoại phổ thông</a>
               <a href="">Điện thoại bàn</a>
@@ -165,26 +287,24 @@
               <a href="">Máy đọc sách</a>
             </div>
           </div>
-          <div class="main_content-sidebar_address">
-            <!-- sidebar__addressSection -->
+          <div class="sidebar__addressSection">
             <h4>ĐỊA CHỈ NHẬN HÀNG</h4>
             <p>Bạn muốn giao hàng tới đâu?</p>
             <div>NHẬP ĐỊA CHỈ</div>
           </div>
-          <div class="main_content-sidebar_service">
-            <!-- sidebar__serviceSection -->
+          <div class="sidebar__serviceSection">
             <h4>DỊCH VỤ</h4>
-            <!-- serviceSection__active ap dung tat ca a-->
-            <a class="section-a" href="">
+
+            <a class="serviceSection__active" href="">
               <img
-                class="uncheck-image"
+                class="uncheckImage"
                 width="18px"
                 height="18px"
                 src="./ASSET/image/unchecked.svg"
                 alt=""
               />
               <img
-                class="tiki-now"
+                class="tikiNow"
                 width="56px"
                 height="16px"
                 src="./ASSET/image/tiki-now.png"
@@ -192,9 +312,9 @@
               />
               Giao Hàng Nhanh 2h
             </a>
-            <a class="section-a" href="">
+            <a class="serviceSection__active" href="">
               <img
-                class="uncheck-image"
+                class="uncheckImage"
                 width="18px"
                 height="18px"
                 src="./ASSET/image/unchecked.svg"
@@ -202,9 +322,9 @@
               />
               Miễn Phí Giao Hàng
             </a>
-            <a class="section-a" href="">
+            <a class="serviceSection__active" href="">
               <img
-                class="uncheck-image"
+                class="uncheckImage"
                 width="18px"
                 height="18px"
                 src="./ASSET/image/unchecked.svg"
@@ -213,39 +333,34 @@
               Rẻ Hơn Hoàn Tiền
             </a>
           </div>
-          <div class="main_content-sidebar_rate">
-            <!-- sidebar__rating -->
+          <div class="sidebar__rating">
             <h4>ĐÁNH GIÁ</h4>
-            <div class="main_content-sidebar_rate_star">
-              <!-- sidebar-rating__star -->
-              <div class="gray-star">
-                <!-- sidebar-rating__grayStar -->
+            <div class="sidebar-rating__star">
+              <div class="sidebar-rating__grayStar">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <div class="yellow-star">
-                <!-- sidebar-rating__yellowStar -->
+              <div class="sidebar-rating__yellowStar">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <div class="rate-content">Từ 5 sao</div>
-              <!-- sidebar-rating__starNumber -->
+              <div class="sidebar-rating__starNumber">Từ 5 sao</div>
             </div>
-            <div class="main_content-sidebar_rate_star">
-              <div class="gray-star">
+            <div class="sidebar-rating__star">
+              <div class="sidebar-rating__grayStar">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <div class="yellow-star">
+              <div class="sidebar-rating__yellowStar">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -254,15 +369,15 @@
               <div class="rate-content">Từ 4 sao</div>
             </div>
 
-            <div class="main_content-sidebar_rate_star">
-              <div class="gray-star">
+            <div class="sidebar-rating__star">
+              <div class="sidebar-rating__grayStar">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <div class="yellow-star">
+              <div class="sidebar-rating__yellowStar">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -270,650 +385,677 @@
               <div class="rate-content">Từ 3 sao</div>
             </div>
           </div>
-          <div class="main_content-sidebar_price">
-            <!-- sidebar__priceSection -->
+          <div class="sidebar__priceSection">
             <h4>GIÁ</h4>
-            <div class="price-filter">
-              <!-- sidebar-priceSection__priceFilter -->
-              <!-- priceRange, all -->
-              <div class="item">
+            <div class="sidebar-priceSection__priceFilter">
+              <div class="priceRange">
                 <a>Dưới 500.000</a>
               </div>
-              <div class="item">
+              <div class="priceRange">
                 <a>Từ 500.000 đến 3.500.000</a>
               </div>
-              <div class="item">
+              <div class="priceRange">
                 <a>Từ 3.500.000 đến 16.000.000</a>
               </div>
-              <div class="item">
+              <div class="priceRange">
                 <a>Trên 16.000.000</a>
               </div>
             </div>
-            <div class="price-text">Chọn khoảng giá</div>
-            <div class="price_input">
+            <div class="priceText">Chọn khoảng giá</div>
+
+            <div class="priceInput">
               <input pattern="[0-9]*" placeholder="Giá từ" value="0" />
               -
               <input pattern="[0-9]*" placeholder="Giá đến" value="0" />
             </div>
             <button>Áp dụng</button>
           </div>
-          <div class="main_content-sidebar_brand">
-            <!-- sidebar__brandSection -->
+          <div class="sidebar__brandSection">
             <h4>THƯƠNG HIỆU</h4>
             <ul>
               <li>
-                <!-- sectionA, all -->
-                <a class="section-a" href="">
-                  <!-- uncheckImage, all -->
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Panasonic</div>
-                  <!-- insideText -->
+                  <div class="insideText">Panasonic</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">OEM</div>
+                  <div class="insideText">OEM</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Samsung</div>
+                  <div class="insideText">Samsung</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Apple</div>
+                  <div class="insideText">Apple</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Masstel</div>
+                  <div class="insideText">Masstel</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Xiaomi</div>
+                  <div class="insideText">Xiaomi</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Nokia</div>
+                  <div class="insideText">Nokia</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Kindle</div>
+                  <div class="insideText">Kindle</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Forme</div>
+                  <div class="insideText">Forme</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">OPPO</div>
+                  <div class="insideText">OPPO</div>
                 </a>
               </li>
             </ul>
-            <!-- moreInformation -->
-            <a class="more-information"
+
+            <a class="moreInformation"
               >Xem thêm
               <i class="fas fa-chevron-down"></i>
             </a>
           </div>
-          <!-- sidebar__backCamera -->
-          <div class="main_content-sidebar_back-camera">
+
+          <div class="sidebar__backCamera">
             <h4>CAMERA SAU</h4>
             <ul>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Từ 11MP đến 13MP</div>
+                  <div class="insideText">Từ 11MP đến 13MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Trên 16MP</div>
+                  <div class="insideText">Trên 16MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Dưới 8MP</div>
+                  <div class="insideText">Dưới 8MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Từ 14MP đến 16MP</div>
+                  <div class="insideText">Từ 14MP đến 16MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Từ 8MP đến 10MP</div>
+                  <div class="insideText">Từ 8MP đến 10MP</div>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="main_content-sidebar_front-camera">
-            <!-- sidebar__frontCamera -->
+          <div class="sidebar__frontCamera">
             <h4>CAMERA TRƯỚC</h4>
 
             <ul>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Trên 12MP</div>
+                  <div class="insideText">Trên 12MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Từ 8MP đến 12MP</div>
+                  <div class="insideText">Từ 8MP đến 12MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Dưới 8MP</div>
+                  <div class="insideText">Dưới 8MP</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Từ 5MP đến 8MP</div>
+                  <div class="insideText">Từ 5MP đến 8MP</div>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="main_content-sidebar_color">
-            <!-- sidebar__colorSection -->
+          <div class="sidebar__colorSection">
             <h4>MÀU SẮC</h4>
             <ul>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Đen</div>
+                  <div class="insideText">Đen</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Xanh</div>
+                  <div class="insideText">Xanh</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Trắng</div>
+                  <div class="insideText">Trắng</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Xám</div>
+                  <div class="insideText">Xám</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Xanh dương</div>
+                  <div class="insideText">Xanh dương</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Vàng</div>
+                  <div class="insideText">Vàng</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Đỏ</div>
+                  <div class="insideText">Đỏ</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Bạc</div>
+                  <div class="insideText">Bạc</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Tím</div>
+                  <div class="insideText">Tím</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Xanh lá</div>
+                  <div class="insideText">Xanh lá</div>
                 </a>
               </li>
             </ul>
-            <!-- moreInformation -->
-            <a class="more-information"
+
+            <a class="moreInformation"
               >Xem thêm
               <i class="fas fa-chevron-down"></i>
             </a>
           </div>
-          <div class="main_content-sidebar_size">
+          <div class="sidebar__sizeSection">
             <h4>KÍCH CỠ</h4>
 
             <ul>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">6GB/64GB</div>
+                  <div class="insideText">6GB/64GB</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">256GB</div>
+                  <div class="insideText">256GB</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">128GB</div>
+                  <div class="insideText">128GB</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">3GB/32GB</div>
+                  <div class="insideText">3GB/32GB</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">512GB</div>
+                  <div class="insideText">512GB</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">2GB/32GB</div>
+                  <div class="insideText">2GB/32GB</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">4GB/64GB</div>
+                  <div class="insideText">4GB/64GB</div>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="main_content-sidebar_supplier">
+          <div class="sidebar__supplierSection">
             <h4>NHÀ CUNG CẤP</h4>
-
             <ul>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Tiki Trading</div>
+                  <div class="insideText">Tiki Trading</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Viễn Tin Sài Gòn</div>
-                </a>
-              </li>
-
-              <li>
-                <a class="section-a" href="">
-                  <img
-                    class="uncheck-image"
-                    width="18px"
-                    height="18px"
-                    src="./ASSET/image/unchecked.svg"
-                    alt=""
-                  />
-                  <div class="inside-text">HAPPY PHONE</div>
+                  <div class="insideText">Viễn Tin Sài Gòn</div>
                 </a>
               </li>
 
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">iStore</div>
+                  <div class="insideText">HAPPY PHONE</div>
                 </a>
               </li>
 
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Suntek</div>
+                  <div class="insideText">iStore</div>
+                </a>
+              </li>
+
+              <li>
+                <a class="serviceSection__active" href="">
+                  <img
+                    class="uncheckImage"
+                    width="18px"
+                    height="18px"
+                    src="./ASSET/image/unchecked.svg"
+                    alt=""
+                  />
+                  <div class="insideText">Suntek</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">IT CHÍNH HÃNG (HCM)</div>
+                  <div class="insideText">IT CHÍNH HÃNG (HCM)</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Long Hưng Mobile</div>
+                  <div class="insideText">Long Hưng Mobile</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Di Động Ngãi Nguyệt</div>
+                  <div class="insideText">Di Động Ngãi Nguyệt</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">SHOP THẾ GIỚI CÔNG NGHỆ</div>
+                  <div class="insideText">SHOP THẾ GIỚI CÔNG NGHỆ</div>
                 </a>
               </li>
               <li>
-                <a class="section-a" href="">
+                <a class="serviceSection__active" href="">
                   <img
-                    class="uncheck-image"
+                    class="uncheckImage"
                     width="18px"
                     height="18px"
                     src="./ASSET/image/unchecked.svg"
                     alt=""
                   />
-                  <div class="inside-text">Mivn</div>
+                  <div class="insideText">Mivn</div>
                 </a>
               </li>
             </ul>
-            <a class="more-information"
+
+            <a class="moreInformation"
               >Xem thêm
               <i class="fas fa-chevron-down"></i>
             </a>
           </div>
         </div>
-        <div class="main_content_category">
-          <div class="main_content_category_title">
+
+        <div class="main-contentSection__category">
+          <div class="category__title">
             Điện Thoại - Máy Tính Bảng: 423 kết quả
           </div>
-          <div class="main_content_category_banner"></div>
-          <div class="main_content_category_product-list">
-            <div class="main_content_category_product-list_static-block">
+          <div class="category__banner">
+            <div class="banner__hidden">
+              <div class="banner__container">
+                <a class="banner__arrowFront" onclick="stepBanner(-1)">
+                  <span class="arrowFront">
+                    <i class="arrowFrontIcon"> </i>
+                  </span>
+                </a>
+                <div id="banner__BannerList">
+                  <div class="bannerList">
+                    <div>
+                      <a>
+                        <img src="./ASSET/image/banner1.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div>
+                      <a>
+                        <img src="./ASSET/image/banner2.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div>
+                      <a>
+                        <img src="./ASSET/image/banner3.jpg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <a class="banner__arrowBack" onclick="stepBanner(1)">
+                  <span class="arrowBack">
+                    <i class="arrowBackIcon"> </i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="category__productList">
+            <div class="productList__staticBlock">
               <a href=""
                 ><img src="./ASSET/image/static-block1.jpg" alt=""
               /></a>
@@ -921,7 +1063,7 @@
                 ><img src="./ASSET/image/static-block2.jpg" alt=""
               /></a>
             </div>
-            <div class="main_content_category_product-list_policy">
+            <div class="productList__policy">
               <a href=""><img src="./ASSET/image/policy1.jpg" alt="" /></a>
               <a href=""><img src="./ASSET/image/policy2.jpg" alt="" /></a>
               <a href=""><img src="./ASSET/image/policy3.jpg" alt="" /></a>
@@ -929,7 +1071,7 @@
               <a href=""><img src="./ASSET/image/policy5.jpg" alt="" /></a>
               <a href=""><img src="./ASSET/image/policy6.jpg" alt="" /></a>
             </div>
-            <div class="main_content_category_product-list_kind-of-product">
+            <div class="productList__kindProduct">
               <a href=""
                 ><img src="./ASSET/image/kind-product1.png" alt=""
               /></a>
@@ -943,25 +1085,23 @@
                 ><img src="./ASSET/image/kind-product4.png" alt=""
               /></a>
             </div>
-            <div class="main_content_category_product-list_sort">
-              <div class="main_content_category_product-list_sort_p1">
+            <div class="productList__productSort">
+              <div class="productList-productSort__p1">
                 <a class="active-category" href="">Phổ Biến</a>
                 <a href="">Bán Chạy</a>
                 <a href="">Hàng Mới</a>
                 <a href="">Giá Thấp</a>
                 <a href="">Giá Cao</a>
               </div>
-              <div class="main_content_category_product-list_sort_p2">
+              <div class="productList-productSort__p2">
                 <a href=""><img src="./ASSET/image/tiki-now.png" alt="" /></a>
                 <a href="">Miễn phí giao hàng</a>
               </div>
             </div>
-            <div class="main_content_category_product-list_category">
+            <div class="productList__productCategory">
               <a href="">
-                <div
-                  class="main_content_category_product-list_category_main-img"
-                >
-                  <div class="freeship-label">
+                <div class="productCategory__mainImage">
+                  <div class="freeshipLabel">
                     <img
                       width="16px"
                       height="16px"
@@ -970,7 +1110,7 @@
                     />
                     <span>Freeship</span>
                   </div>
-                  <div class="main-image">
+                  <div class="mainImage">
                     <img
                       width="200px"
                       height="200px"
@@ -979,225 +1119,71 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="main_content_category_product-list_category_image-list"
-                >
+                <div class="productCategory__imageList">
                   <img src="./ASSET/image/image-list1.jpg" alt="" />
                   <img src="./ASSET/image/image-list2.jpg" alt="" />
                   <img src="./ASSET/image/image-list3.jpg" alt="" />
                   <img src="./ASSET/image/image-list4.jpg" alt="" />
                 </div>
-                <div
-                  class="main_content_category_product-list_category_content"
-                >
-                  <div class="tikinow-image">
+                <div class="productCategory__content">
+                  <div class="tikinowImage">
                     <img src="./ASSET/image/tiki-now.png" alt="" />
                   </div>
-                  <div class="name-product">
+                  <div class="nameProduct">
                     <p>Ad</p>
                     <span>
                       Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính
                       Hãng
                     </span>
                   </div>
-                  <div class="rate-review">
-                    <div class="rate-review_p1">
-                      <div class="rate-review_p1_gray-star">
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#c7c7c7"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(199, 199, 199)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#c7c7c7"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(199, 199, 199)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#c7c7c7"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(199, 199, 199)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#c7c7c7"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(199, 199, 199)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#c7c7c7"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(199, 199, 199)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
+                  <div class="rateReview">
+                    <div class="rateReview__starSection">
+                      <div class="rateReview-starSection__grayStar">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                       </div>
-                      <div class="rate-review_p1_yellow-star">
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#fdd836"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(253, 216, 54)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#fdd836"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(253, 216, 54)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#fdd836"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(253, 216, 54)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#fdd836"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(253, 216, 54)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          viewBox="0 0 24 24"
-                          size="12"
-                          color="#fdd836"
-                          height="12"
-                          width="12"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="color: rgb(253, 216, 54)"
-                        >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                          ></path>
-                        </svg>
+                      <div
+                        style="width: 80%"
+                        class="rateReview-starSection__yellowStar"
+                      >
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                       </div>
                     </div>
-                    <div class="rate-review_p1_content">(24)</div>
+                    <div class="rateReview__contentSection">(24)</div>
                   </div>
-                  <div class="price-discount">
+                  <div class="priceDiscount">
                     <p>10.990.000 <u>đ</u></p>
                     <span>-4%</span>
                   </div>
-                  <div class="badge-under-price">
+                  <div class="badgeUnderPrice">
                     <img src="./ASSET/image/badge-under-price.png" alt="" />
                   </div>
-                  <div class="badge-benefits">
+                  <div class="badgeBenefits">
                     <img src="./ASSET/image/badge-benefit1.png" alt="" />
                     <span>Trả góp</span>
                   </div>
-                  <div class="freegift-list">
+                  <div class="freegiftList">
                     <img
-                      class="small-freegift"
+                      class="smallFreeGift"
                       src="./ASSET/image/free-gift1.png"
                       alt=""
                     />
+
                     <span>Quà tặng kèm</span>
                     <img
-                      class="big-freegift"
+                      class="bigFreeGift"
                       src="./ASSET/image/free-gift2.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="badge-additional-info">
+                  <div class="badgeAdditionalInfo">
                     <span style="color: rgb(120, 120, 120)">Nhiều màu</span>
                   </div>
                 </div>
@@ -1376,8 +1362,63 @@
         </div>
       </div>
     </div>
-    <script src="./JS/main.js"></script>
 
     <!-----------------------FOOTER END ------------------------>
+    <div id="bottom">
+      <div class="bottomForm">
+        <div class="bottomForm__Container">
+          <button class="bottomForm__btn" onclick="registerFormClose()">
+            <img src="./ASSET/image/x-img.png" alt="" />
+          </button>
+          <div class="bottomForm__left">
+            <div class="bottomForm-left__container">
+              <div class="bottomForm-left__head">
+                <h4>Đăng nhập bằng email</h4>
+                <p>Nhập email và mật khẩu tài khoản Tiki</p>
+              </div>
+              <form class="bottomForm-left__form">
+                <div class="input">
+                  <input
+                    type="email"
+                    name="email"
+                    id="registerEmail"
+                    placeholder="acb@email.com"
+                    value=""
+                  />
+                </div>
+                <div class="input">
+                  <input
+                    type="password"
+                    name="password"
+                    id="registerPassword"
+                    placeholder="Mật khẩu"
+                    value=""
+                  />
+                  <span class="showPass">Hiện</span>
+                </div>
+                <button class="login" onclick="validate()">Đăng nhập</button>
+              </form>
+              <p class="forgotPass">Quên mật khẩu?</p>
+              <p class="creatAccount">
+                Chưa có tài khoản?
+                <span>Tạo tài khoản</span>
+              </p>
+            </div>
+          </div>
+          <div class="bottomForm__right">
+            <img
+              src="./ASSET/image/right-background-form.png"
+              alt=""
+              width="203px"
+            />
+            <div class="bottomForm-right__content">
+              <h4>Mua sắm tại Tiki</h4>
+              <span>Siêu ưu đãi mỗi ngày</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/main.js"></script>
   </body>
 </html>
