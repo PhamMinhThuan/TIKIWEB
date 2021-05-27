@@ -1017,12 +1017,13 @@
 
         <div class="main-contentSection__category">
           <div class="category__title">
-            Điện Thoại - Máy Tính Bảng: 423 kết quả
+            Điện Thoại - Máy Tính Bảng:
+            <h4><span id="title__number">0</span> kết quả</h4>
           </div>
           <div class="category__banner">
             <div class="banner__hidden">
               <div class="banner__container">
-                <a class="banner__arrowFront" onclick="stepBanner(-1)">
+                <a id="banner__arrowFront" onclick="stepBanner(-1)">
                   <span class="arrowFront">
                     <i class="arrowFrontIcon"> </i>
                   </span>
@@ -1046,7 +1047,7 @@
                     </div>
                   </div>
                 </div>
-                <a class="banner__arrowBack" onclick="stepBanner(1)">
+                <a id="banner__arrowBack" onclick="stepBanner(1)">
                   <span class="arrowBack">
                     <i class="arrowBackIcon"> </i>
                   </span>
@@ -1098,43 +1099,59 @@
                 <a href="">Miễn phí giao hàng</a>
               </div>
             </div>
-            <div class="productList__productCategory">
-              <a href="">
+            <div id="productList__productCategory">
+              <!-- <a
+                class="productCategory__container"
+                onmouseover="changeClass(event)"
+                onmouseout="returnClass(event)"
+                href=""
+              >
                 <div class="productCategory__mainImage">
-                  <div class="freeshipLabel">
-                    <img
-                      width="16px"
-                      height="16px"
-                      src="./ASSET/image/free-ship.png"
-                      alt=""
-                    />
-                    <span>Freeship</span>
-                  </div>
                   <div class="mainImage">
                     <img
+                      class="mainImage__img"
                       width="200px"
                       height="200px"
-                      src="./ASSET/image/category1.jpg"
+                      src="./ASSET/image/category11.jpg"
                       alt=""
                     />
                   </div>
                 </div>
                 <div class="productCategory__imageList">
-                  <img src="./ASSET/image/image-list1.jpg" alt="" />
-                  <img src="./ASSET/image/image-list2.jpg" alt="" />
-                  <img src="./ASSET/image/image-list3.jpg" alt="" />
-                  <img src="./ASSET/image/image-list4.jpg" alt="" />
+                  <img
+                    class="imageList imageList__hover"
+                    onmouseover="hoverBorder(event)"
+                    src="./ASSET/image/category11.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="imageList"
+                    onmouseover="hoverBorder(event)"
+                    src="./ASSET/image/category12.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="imageList"
+                    onmouseover="hoverBorder(event)"
+                    src="./ASSET/image/category13.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="imageList"
+                    onmouseover="hoverBorder(event)"
+                    src="./ASSET/image/category14.jpg"
+                    alt=""
+                  />
                 </div>
                 <div class="productCategory__content">
                   <div class="tikinowImage">
                     <img src="./ASSET/image/tiki-now.png" alt="" />
                   </div>
                   <div class="nameProduct">
-                    <p>Ad</p>
-                    <span>
+                    <p>
                       Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính
                       Hãng
-                    </span>
+                    </p>
                   </div>
                   <div class="rateReview">
                     <div class="rateReview__starSection">
@@ -1162,14 +1179,14 @@
                     <p>10.990.000 <u>đ</u></p>
                     <span>-4%</span>
                   </div>
-                  <div class="badgeUnderPrice">
+                  <div style="display: block" class="badgeUnderPrice">
                     <img src="./ASSET/image/badge-under-price.png" alt="" />
                   </div>
-                  <div class="badgeBenefits">
+                  <div style="display: block" class="badgeBenefits">
                     <img src="./ASSET/image/badge-benefit1.png" alt="" />
                     <span>Trả góp</span>
                   </div>
-                  <div class="freegiftList">
+                  <div style="display: flex" class="freegiftList">
                     <img
                       class="smallFreeGift"
                       src="./ASSET/image/free-gift1.png"
@@ -1183,11 +1200,11 @@
                       alt=""
                     />
                   </div>
-                  <div class="badgeAdditionalInfo">
+                  <div style="display: block" class="badgeAdditionalInfo">
                     <span style="color: rgb(120, 120, 120)">Nhiều màu</span>
                   </div>
                 </div>
-              </a>
+              </a> -->
             </div>
           </div>
         </div>

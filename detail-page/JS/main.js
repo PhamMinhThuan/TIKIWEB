@@ -3,18 +3,42 @@ let stepNumber = 0;
 function stepSlide(n){
 arrowRun(stepNumber+=n);
 }
-//   
-function arrowRun(m){
 let step = document.getElementById("main-parrityProduct__productList");
-  if ((m > 2)||(m < 0) ){
-  
-  }else{
-  let sum = 0;
-  sum = -1236*m;
-  console.log(sum);
-  step.style.marginLeft=sum+"px";
+let front = document.getElementById("arrowFront");
+let back = document.getElementById("arrowBack");
+front.style.display="none";
+function arrowRun(m){
+  // Hiện nút
+  if (m>=2){
+    back.style.display="none";
+    front.style.display="flex";
+  }else if(m<=0){
+    front.style.display="none";
+    back.style.display="flex";
+  }  else{
+    front.style.display="flex";
+    back.style.display="flex";
   }
-
+  
+    let sum = 0;
+    sum = -1236*m;
+    step.style.marginLeft=sum+"px";
+    step.style.transitionDuration = "0.5s";
+  
+  }
+  
+//   
+// function arrowRun(m){
+// let step = document.getElementById("main-parrityProduct__productList");
+//   if ((m > 2)||(m < 0) ){
+  
+//   }else{
+//   let sum = 0;
+//   sum = -1236*m;
+  
+//   step.style.marginLeft=sum+"px";
+//   }
+// }
 // let movement = [
 //   {
 //     marginLeft="0px",
@@ -44,7 +68,7 @@ let step = document.getElementById("main-parrityProduct__productList");
 //   fill: 'forwards'
 // });
 
-}
+
 // san pham tuong tu
 
 function addProduct(link, name, width ,amount ,dis_price ,percent , price ){

@@ -3,7 +3,6 @@
   font-size: 14px;
   background-color: rgb(239, 239, 239);
 }
-/* le moi ben la 150px */
 .wrapper {
   width: 1236px;
   margin: 0px auto;
@@ -204,7 +203,7 @@
   text-decoration: none;
   height: 100%;
 }
-.header-listDropMenu__menuInner li:hover {
+.header-listDropMenu__menuInner a:hover {
   background-color: rgb(1, 127, 255);
   border-color: rgb(1, 127, 255);
   color: white;
@@ -632,7 +631,16 @@
   width: 1000px;
   border-radius: 0px 4px 4px 0px;
 }
-
+.category__title {
+  font-size: 25px;
+  margin: 15px;
+}
+.category__title h4 {
+  display: inline;
+  font-size: 22px;
+  font-weight: 300;
+  color: rgb(137, 137, 137);
+}
 .category__banner {
   margin-left: 0px;
   margin-right: 0px;
@@ -648,8 +656,8 @@
   width: 2613px;
   margin-left: 0px;
 }
-.banner__arrowFront,
-.banner__arrowBack {
+#banner__arrowFront,
+#banner__arrowBack {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -657,19 +665,21 @@
   opacity: 0.3;
   z-index: 1;
 }
-.banner__arrowFront {
+#banner__arrowFront {
   left: 10px;
+  display: block;
 }
-.banner__arrowBack {
+#banner__arrowBack {
   right: 10px;
   transform: rotate(180deg);
+  display: block;
 }
-.category__banner:hover .banner__arrowFront,
-.category__banner:hover .banner__arrowBack {
+.category__banner:hover #banner__arrowFront,
+.category__banner:hover #banner__arrowBack {
   opacity: 1;
 }
-.banner__arrowFront span,
-.banner__arrowBack span {
+#banner__arrowFront span,
+#banner__arrowBack span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -680,10 +690,10 @@
   border: 1px solid rgb(204, 204, 204);
   border-radius: 16px;
 }
-.banner__arrowFront span {
+#banner__arrowFront span {
   left: 10px;
 }
-.banner__arrowBack span {
+#banner__arrowBack span {
   right: 10px;
 }
 .arrowFrontIcon,
@@ -706,6 +716,7 @@
 .bannerList img {
   height: 286px;
 }
+
 .productList__staticBlock {
   display: flex;
   flex-flow: row nowrap;
@@ -752,6 +763,7 @@
 .productList-productSort__p2 {
   padding-top: 20px;
   padding-left: 16px;
+  padding: 20px 0px 10px 16px;
   display: flex;
 }
 .productList-productSort__p2 a {
@@ -766,24 +778,18 @@
   margin-right: 10px;
   color: rgb(36, 36, 36);
 }
-.productList__productCategory {
+#productList__productCategory {
   display: flex;
+  flex-flow: row wrap;
 }
-.productList__productCategory a {
+#productList__productCategory a:hover {
+  box-shadow: 0 0 10px 3px #ecebeb;
+}
+#productList__productCategory a {
   width: 25%;
-  padding: 20px 10px;
+  padding: 20px 15px;
   display: flex;
   flex-flow: column nowrap;
-}
-.freeshipLabel {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  background: rgb(0, 153, 0);
-  transform: skew(-25deg);
-  color: rgb(255, 255, 255);
 }
 
 .productCategory__mainImage {
@@ -793,33 +799,38 @@
 }
 .productCategory__imageList {
   margin: 16px auto 12px 0px;
-}
-.productCategory__imageList {
   margin-top: 10px;
 }
-.nameProduct p {
-  background: rgb(242, 242, 242);
-  line-height: 12px;
-  padding: 0px 4px;
-  font-size: 9px;
-  margin: 0px 4px 0px 0px;
-  top: -1px;
-  border-radius: 2px;
-  display: inline-block;
+.productCategory__imageList img {
+  padding: 1px;
 }
-.nameProduct span {
+.productCategory__content {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 260px;
+}
+.imageList__hover {
+  border: 1px solid rgb(253, 130, 10);
+}
+.nameProduct p {
   font-size: 15px;
   font-weight: 400;
   margin: 0px 0px 4px;
   line-height: 20px;
   color: rgb(36, 36, 36);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nameProduct {
-  display: inline-block;
+  display: flex;
 }
 .rateReview {
   display: flex;
   margin-top: 5px;
+  align-items: center;
 }
 .rateReview__starSection {
   position: relative;
@@ -828,6 +839,7 @@
 .rateReview__starSection i {
   padding: 0px;
   margin: 0px;
+  font-size: 10px;
 }
 .rateReview-starSection__grayStar {
   color: rgb(199, 199, 199);
@@ -838,6 +850,12 @@
   top: 0px;
   left: 0px;
   color: rgb(253, 216, 54);
+}
+.rateReview__contentSection {
+  color: rgb(120, 120, 120);
+  font-size: 13px;
+  padding-top: 4px;
+  margin-left: 3px;
 }
 .tikinowImage {
   margin: 10px 0px;
@@ -853,9 +871,11 @@
   margin: 0px 8px 0px 0px;
   color: rgb(36, 36, 36);
 }
+
 .priceDiscount span {
   font-size: 14px;
   line-height: 20px;
+  color: rgb(36, 36, 36);
 }
 .badgeUnderPrice {
   margin-top: 8px;
@@ -863,12 +883,14 @@
 .badgeBenefits {
   display: flex;
   margin-top: 8px;
+  align-items: center;
 }
 .badgeBenefits span {
   font-size: 13px;
   line-height: 16px;
   margin-left: 4px;
   font-weight: 550;
+  color: rgb(36, 36, 36);
 }
 .badgeAdditionalInfo {
   font-size: 13px;

@@ -1,4 +1,4 @@
-//slideShow section function
+//------------------ slideShow----------------------------
 let slideIndex = 1;
 window.onload = setInterval(() => {
   showSlides((slideIndex += 1));
@@ -30,24 +30,40 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+//------------------ PRODUCT GIA SOC----------------------------
 
 // disproduct Section function
 let stepNumber = 0;
 function stepSlide(n){
 arrowRun(stepNumber+=n);
-}   
-function arrowRun(m){
+}  
 let step = document.getElementById("disProduct-inner__productList");
-  if ((m > 2)||(m < 0) ){
-  }else{
+let front = document.getElementById("disProduct-inner__frontArrow");
+let back = document.getElementById("disProduct-inner__backArrow");
+front.style.display="none";
+function arrowRun(m){
+// Hiện nút
+if (m>=2){
+  back.style.display="none";
+  front.style.display="flex";
+}else if(m<=0){
+  front.style.display="none";
+  back.style.display="flex";
+}  else{
+  front.style.display="flex";
+  back.style.display="flex";
+}
+
   let sum = 0;
   sum = -1236*m;
   step.style.marginLeft=sum+"px";
-  }
+  step.style.transitionDuration = "0.5s";
+
 }
-//listItem
+//------------------ LIST ITEM----------------------------
   productItem=[
     {
+      link:"../detail-page/main.html",
      image: "OPPO-A12.jpg",
      sale: "19%",
      price: " 2.420.000 ₫",
@@ -60,81 +76,84 @@ let step = document.getElementById("disProduct-inner__productList");
     price: " 2.890.000 ₫",
     progress: "75%",
     amount: "96"
-  },
-  {
-    image: "OPPO-A12.jpg",
+    },
+    {
+      image: "galaxy-a72.jpg",
+      sale: "4%",
+      price: " 10.990.000 ₫",
+      progress: "80%",
+      amount: "24"
+    },
+    {
+      link:"../detail-page/main.html",
+     image: "OPPO-A12.jpg",
+     sale: "19%",
+     price: " 2.420.000 ₫",
+     progress: "90%",
+     amount: "194"
+    },
+    {
+     image: "redmi9.jpg",
+     sale: "19%",
+     price: " 2.890.000 ₫",
+     progress: "75%",
+     amount: "96"
+    },
+    {
+      image: "galaxy-a72.jpg",
+      sale: "4%",
+      price: " 10.990.000 ₫",
+      progress: "80%",
+      amount: "24"
+    },
+    {
+      link:"../detail-page/main.html",
+     image: "OPPO-A12.jpg",
+     sale: "19%",
+     price: " 2.420.000 ₫",
+     progress: "90%",
+     amount: "194"
+    },
+    {
+    image: "redmi9.jpg",
     sale: "19%",
-    price: " 2.420.000 ₫",
-    progress: "90%",
-    amount: "194"
-  },
-  {
-   image: "redmi9.jpg",
-   sale: "19%",
-   price: " 2.890.000 ₫",
-   progress: "75%",
-   amount: "96"
-  },
-  {
-   image: "OPPO-A12.jpg",
-   sale: "19%",
-   price: " 2.420.000 ₫",
-   progress: "90%",
-   amount: "194"
- },
- {
-  image: "redmi9.jpg",
-  sale: "19%",
-  price: " 2.890.000 ₫",
-  progress: "75%",
-  amount: "96"
- },
- {
-   image: "OPPO-A12.jpg",
-   sale: "19%",
-   price: " 2.420.000 ₫",
-   progress: "90%",
-   amount: "194"
- },
- {
-  image: "redmi9.jpg",
-  sale: "19%",
-  price: " 2.890.000 ₫",
-  progress: "75%",
-  amount: "96"
- },
- {
-   image: "OPPO-A12.jpg",
-   sale: "19%",
-   price: " 2.420.000 ₫",
-   progress: "90%",
-   amount: "194"
- },
- {
-  image: "redmi9.jpg",
-  sale: "19%",
-  price: " 2.890.000 ₫",
-  progress: "75%",
-  amount: "96"
- },
- {
-  image: "OPPO-A12.jpg",
-  sale: "19%",
-  price: " 2.420.000 ₫",
-  progress: "90%",
-  amount: "194"
-},
-{
- image: "redmi9.jpg",
- sale: "19%",
- price: " 2.890.000 ₫",
- progress: "75%",
- amount: "96"
-}
+    price: " 2.890.000 ₫",
+    progress: "75%",
+    amount: "96"
+    },
+    {
+    image: "galaxy-a72.jpg",
+    sale: "4%",
+    price: " 10.990.000 ₫",
+    progress: "80%",
+    amount: "24"
+    },
+    {
+      link:"../detail-page/main.html",
+     image: "OPPO-A12.jpg",
+     sale: "19%",
+     price: " 2.420.000 ₫",
+     progress: "90%",
+     amount: "194"
+    },
+    {
+    image: "redmi9.jpg",
+    sale: "19%",
+    price: " 2.890.000 ₫",
+    progress: "75%",
+    amount: "96"
+    },
+    {
+    image: "galaxy-a72.jpg",
+    sale: "4%",
+    price: " 10.990.000 ₫",
+    progress: "80%",
+    amount: "24"
+    }
  ]
-  function addDisProduct(image, sale, price, progress, amount){
+  function addDisProduct(link, image, sale, price, progress, amount){
     document.getElementById("disProduct-inner__productList").innerHTML+=`
-    <a href="">
+    <a href="`+link+`">
     
     <div class="productList__imageSecton">
       <img 
@@ -160,12 +179,9 @@ let step = document.getElementById("disProduct-inner__productList");
 `
 }
     for(Item of productItem){
-      addDisProduct(Item.image, Item.sale, Item.price, Item.progress, Item.amount)
+      addDisProduct(Item.link, Item.image, Item.sale, Item.price, Item.progress, Item.amount)
     }
-//-------------------------------break-----------------------
-
-//max key: 10 do dinh huong css width co dinh, neu se tu dong nhay xuong hang khac
-// Icon section
+//-------------------------------ICON-----------------------
 
 navItem=[
   {
@@ -225,8 +241,8 @@ for(Item of navItem){
  addNav(Item.image, Item.content)
 }
 
-//-------------------------------break-----------------------
-// disBrandList section
+//-------------------------------DISBRANDLIST-----------------------
+
 brandItem=[
   {
    image: "dis-brand1.jpg",
@@ -254,9 +270,8 @@ for(Item of brandItem){
   addBrand(Item.image)
 }
 
-//-------------------------------break-----------------------
+//-------------------------------ORDERLIST-----------------------
 
-//orderList section
 listItem=[
   {
    image: "order-list1.jpg",
@@ -315,9 +330,8 @@ function addList(image, content){
     addList(Item.image, Item.content)
   }
 
-//-------------------------------break-----------------------
+//-------------------------------SEARCH-----------------------
 
-//SearchSection 
 imageItem=[
   {
    image1: "search-group11.jpg",
@@ -352,11 +366,6 @@ imageItem=[
   amount: "960 sản phẩm"
 }
 ]
-// main__searchSection
-// main__searchSection__imageGroup
-// main__searchSection__contentSection
-// contentSection__title
-// contentSection__subTitle
 
 function addImage(image1, image2, image3, color, content, amount){
   document.getElementById("main__searchSection").innerHTML+=`
@@ -381,9 +390,8 @@ function addImage(image1, image2, image3, color, content, amount){
   }
 
 
-//-------------------------------break-----------------------
+//-------------------------------DISDEAL-----------------------
 
-//Disdeal Section
 dealItem=[
   {
    image: "dis-deal1.jpg"
@@ -405,11 +413,11 @@ function addDeal(image){
     addDeal(Item.image)
   }
 
-//-------------------------------break-----------------------
+//-------------------------------PRODUCTLIST-----------------------
 
-//ProductList section
 sumOfProduct=[
   {
+    linking: "../detail-page/main.html",
    link: "OPPO-A12.jpg",
    name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
    rating: "80%",
@@ -424,379 +432,320 @@ sumOfProduct=[
    rate_amount: 96,
    price:  " 2.890.000 ₫",
    dis_price: "-19%"
-},
-{
- link: "goigel.jpg",
- name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
- rating: "80%",
- rate_amount: 50,
- price:  "339.000 đ",
- dis_price: "-42%"
-},
-{
- link: "nemvanthanh.jpg",
- name:"Nệm cao su Vạn Thành Standard chính hãng",
- rating: "90%",
- rate_amount: 20,
- price:  "3.760.000 đ",
- dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},  
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},
-{
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-},  {
-  link: "OPPO-A12.jpg",
-  name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
-  rating: "80%",
-  rate_amount: 194,
-  price:  "2.420.000 ₫",
-  dis_price: "-19%"
-},
-{
-  link: "redmi9.jpg",
-  name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
-  rating: "100%",
-  rate_amount: 96,
-  price:  " 2.890.000 ₫",
-  dis_price: "-19%"
-},
-{
-link: "goigel.jpg",
-name:"Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-rating: "80%",
-rate_amount: 50,
-price:  "339.000 đ",
-dis_price: "-42%"
-},
-{
-link: "nemvanthanh.jpg",
-name:"Nệm cao su Vạn Thành Standard chính hãng",
-rating: "90%",
-rate_amount: 20,
-price:  "3.760.000 đ",
-dis_price: "-27%"
-}
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+   {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+   {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ },
+  {
+    linking: "../detail-page/main.html",
+   link: "OPPO-A12.jpg",
+   name:"Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng ",
+   rating: "80%",
+   rate_amount: 194,
+   price:  "2.420.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "redmi9.jpg",
+   name:"Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+   rating: "100%",
+   rate_amount: 96,
+   price:  " 2.890.000 ₫",
+   dis_price: "-19%"
+ },
+ {
+   link: "galaxy-a72.jpg",
+   name:"Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+   rating: "80%",
+   rate_amount: 24,
+   price:  "10.990.000 đ",
+   dis_price: "-4%"
+ }
 ]
 
-function addProduct(link, name, rating, rate_amount, price, dis_price){
+function addProduct(linking, link, name, rating, rate_amount, price, dis_price){
     document.getElementById("main-productList__innerSection").innerHTML+=`
-    <a href="">
+    <a href="`+linking+`">
     <div class="productList-innerSection__imageSection">
       <img src="./ASSET/image/`+link+`" alt="" />
     </div>
@@ -840,7 +789,7 @@ function addProduct(link, name, rating, rate_amount, price, dis_price){
 }
 for (let product of sumOfProduct){
   
-  addProduct(product.link, product.name, product.rating, product.rate_amount, product.price, product.dis_price)
+  addProduct(product.linking , product.link, product.name, product.rating, product.rate_amount, product.price, product.dis_price)
   }
       
 // function moreInformation button
@@ -853,6 +802,7 @@ document.getElementById("main-productList__moreButton").addEventListener("click"
       innerSection.classList.add("toggle");
     }
   }
+// ----------------------REGISTER---------------------------
 // FUNCTION OPEN ĐĂNG NHẬP
 function registerFormOpen(){
   let form = document.getElementById("bottom");
@@ -864,18 +814,17 @@ function registerFormClose(){
   form.style.display="none";
 }
 // FUNCTION ĐĂNG NHẬP
-          function validate(){
-             var email = document.getElementById("registerEmail").value;
-             var password = document.getElementById("registerPassword").value;
-             console.log(email);
-             console.log(password);
-            if((email=="USERNAME@gmail.com")&&(password=="123456")){
-              alert("Chúc mừng ban, đăng nhập thành công!");
-
-            }else{
-              alert("Bạn nhập sai tên đăng nhập hoặc mật khẩu");
-          }
-        }
+  function validate(){
+     var email = document.getElementById("registerEmail").value;
+     var password = document.getElementById("registerPassword").value;
+     console.log(email);
+     console.log(password);
+    if((email=="USERNAME@gmail.com")&&(password=="123456")){
+      alert("Chúc mừng ban, đăng nhập thành công!");
+    }else{
+      alert("Bạn nhập sai tên đăng nhập hoặc mật khẩu");
+  }
+}
 
 
 

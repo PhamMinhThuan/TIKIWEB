@@ -1,258 +1,167 @@
-// banner
+// ------------------BANNER-------------------
+
 let stepNumber = 0;
+
 function stepBanner(n) {
   arrowRun((stepNumber += n));
 }
+let step = document.getElementById("banner__BannerList");
+let front = document.getElementById("banner__arrowFront");
+let back = document.getElementById("banner__arrowBack");
+front.style.display = "none";
 function arrowRun(m) {
-  let step = document.getElementById("banner__BannerList");
   let sum = 0;
   switch (m) {
     case 0:
       sum = 0;
       step.style.marginLeft = sum + "px";
+      front.style.display = "none";
+      back.style.display = "flex";
       break;
     case 1:
-      sum = -804;
+      sum = -803;
       step.style.marginLeft = sum + "px";
+      front.style.display = "flex";
+      back.style.display = "flex";
       break;
     case 2:
       sum = -1606;
       step.style.marginLeft = sum + "px";
+      back.style.display = "none";
+      front.style.display = "flex";
       break;
     default:
   }
+  document.getElementById("banner__BannerList").style.transitionDuration = "1s";
 }
 
-function addProduct(link, name, price, dis_price) {
-  document.getElementById("main_product_list_container_main").innerHTML +=
-    `
-    <a href="">
-    <div class="main_product_list_container_main_img">
-      <img src="` +
-    link +
-    `" alt="" />
-    </div>
-    <div class="main_product_list_container_main_name">
-    ` +
-    name +
-    `
-    </div>
-    <div class="main_product_list_container_main_review">
-      <div class="main_product_list_container_main_review_rating">
-        <div
-          class="main_product_list_container_main_review_rating_rating-total"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#c7c7c7"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(199, 199, 199)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
+// ------------------PRODUCTLIST-------------------
+// FUNCTION XÓA BORDER
+function eraseBorder() {
+  let imageList = document.getElementsByClassName("imageList");
 
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#c7c7c7"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(199, 199, 199)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#c7c7c7"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(199, 199, 199)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#c7c7c7"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(199, 199, 199)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#c7c7c7"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(199, 199, 199)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-        </div>
-        <div
-          class="main_product_list_container_main_review_rating_rating-average"
-        >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#fdd836"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(253, 216, 54)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#fdd836"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(253, 216, 54)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#fdd836"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(253, 216, 54)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#fdd836"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(253, 216, 54)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            size="12"
-            color="#fdd836"
-            height="12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: rgb(253, 216, 54)"
-          >
-            <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-            ></path>
-          </svg>
-        </div>
-      </div>
-      <div class="main_product_list_container_main_review_amount">
-        (24)
-      </div>
-    </div>
-    <div class="main_product_list_container_main_price">
-      <div class="main_product_list_container_main_price_1">
-      ` +
-    price +
-    `
-      </div>
-      <div class="main_product_list_container_main_price_2"> ` +
-    dis_price +
-    `</div>
-    </div>
-  </a>
-`;
+  for (let i = 0; i < imageList.length; i++) {
+    if (imageList[i].classList.contains("imageList__hover")) {
+      imageList[i].classList.remove("imageList__hover");
+    }
+  }
 }
-// function addProduct(link, name, price, dis_price)
-// addProduct("product-order-list1.jpg","Kệ Đựng Cốc Trà Sữa Bằng Nhựa 4 Ngăn - Màu Đen",5000, 1000);
-let link = [
-  "https://salt.tikicdn.com/cache/280x280/ts/product/d0/e7/12/419d762bb926faa89c6140dd99d01638.jpg",
-  "https://salt.tikicdn.com/cache/280x280/ts/product/88/0a/da/e7ca449c225fb0944d6df8b33e244fcf.jpg",
-  "https://salt.tikicdn.com/cache/280x280/ts/product/e3/51/a3/570b7f7fcbf38a7921e2cb81038210fa.jpg",
-  "https://salt.tikicdn.com/cache/280x280/ts/product/13/c0/1b/f2b7c6c63c60e6c8c9ff78935453a307.jpg",
-  "https://salt.tikicdn.com/cache/280x280/ts/product/0f/5a/1f/8e30dc37a3be03b7e89ce49c66751abf.JPG",
-];
-
-let name = [
-  "Gối cao su non gel lạnh làm mát – Hàng chính hãng Mehome Hàn Quốc – Mát lạnh sảng khoái êm ái cả đêm (MP-011)",
-  "Nệm cao su Vạn Thành Standard chính hãng",
-  "Giá kệ để giày dép 3/4/5/6 tầng Inox cao cấp bền đẹp Vando - kệ đa năng để đồ siêu chắc chắn",
-  "Bộ Chăn Ga Gối Lụa Tencel 60s Đơn Sắc LIDACO Cao Cấp",
-  "Nệm Đa Năng Everon",
-];
-let price = ["339.000 đ", "3.760.000 đ", "259.000 đ", "974.000 đ", "722.000đ"];
-
-let dis_price = ["-42%", "-27%", "-30%", "-46%", "-52%"];
-
-for (let i = 0; i < link.length; i++) {
-  addProduct(link[i], name[i], price[i], dis_price[i]);
+// FUNCTION THÊM BORDER
+function hoverBorder(event) {
+  let changeImage = document.querySelector(".mainImage .mainImage__img");
+  eraseBorder();
+  event.target.classList.add("imageList__hover");
+  changeImage.src = event.target.src;
 }
+
+// FUNCTION TẠO DANH SÁCH SẢN PHẨM
+function addProduct(link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
+  document.getElementById("productList__productCategory").innerHTML+=`
+  <a class="productCategory__container" href="`+link+`">  
+  <div class="productCategory__mainImage">
+  <div class="mainImage">
+    <img
+      class="mainImage__img"
+      width="200px"
+      height="200px"
+      src="./ASSET/image/`+mainImage+`"
+      alt=""
+    />
+  </div>
+</div>
+<div class="productCategory__imageList">
+  <img
+    class="imageList imageList__hover"
+    onmouseover="hoverBorder(event)"
+    src="./ASSET/image/`+image1+`"
+    alt=""
+  />
+  <img
+    class="imageList"
+    onmouseover="hoverBorder(event)"
+    src="./ASSET/image/`+image2+`"
+    alt=""
+  />
+  <img
+    class="imageList"
+    onmouseover="hoverBorder(event)"
+    src="./ASSET/image/`+image3+`"
+    alt=""
+  />
+  <img 
+    class="imageList"
+    style="display: `+display4+`"
+    onmouseover="hoverBorder(event)"
+    src="./ASSET/image/`+image4+`"
+    alt=""
+  />
+</div>
+<div class="productCategory__content">
+  <div class="tikinowImage">
+    <img src="./ASSET/image/tiki-now.png" alt="" />
+  </div>
+  <div class="nameProduct">
+    <p>`+name+`</p>
+  </div>
+  <div class="rateReview">
+    <div class="rateReview__starSection">
+      <div class="rateReview-starSection__grayStar">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <div
+        style="width: `+rating+`"
+        class="rateReview-starSection__yellowStar"
+      >
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
+    <div class="rateReview__contentSection">(`+amount+`)</div>
+  </div>
+  <div class="priceDiscount">
+    <p>`+disprice+` <u>đ</u></p>
+    <span>`+dispercent+`</span>
+  </div>
+  <div style="display: `+underPrice+`" class="badgeUnderPrice">
+    <img src="./ASSET/image/badge-under-price.png" alt="" />
+  </div>
+  <div style="display: `+loan+`" class="badgeBenefits">
+    <img src="./ASSET/image/badge-benefit1.png" alt="" />
+    <span>Trả góp</span>
+  </div>
+  <div style="display: `+gift+`" class="freegiftList">
+    <img
+      class="smallFreeGift"
+      src="./ASSET/image/free-gift1.png"
+      alt=""
+    />
+
+    <span>Quà tặng kèm</span>
+    <img
+      class="bigFreeGift"
+      src="./ASSET/image/free-gift2.jpg"
+      alt=""
+    />
+  </div>
+  <div style="display: `+color+`" class="badgeAdditionalInfo">
+    <span style="color: rgb(120, 120, 120)">Nhiều màu</span>
+  </div>
+</div>
+</a>
+  `
+}
+
+function ABC(){
+  
+}
+// ------------------REGISTER-------------------
 
 // FUNCTION OPEN ĐĂNG NHẬP
 function registerFormOpen() {
@@ -276,3 +185,452 @@ function validate() {
     alert("Bạn nhập sai tên đăng nhập hoặc mật khẩu");
   }
 }
+
+// ------------------DATA-------------------
+// DANH SÁCH SẢN PHẨM
+ProductList=[
+  { 
+    link:"../detail-page/main.html", 
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  }
+
+]
+for(Item of ProductList){
+  addProduct(Item.link, Item.mainImage, Item.image1, Item.image2, Item.image3, Item.display4,Item.image4, Item.name, Item.rating, Item.amount, Item.disprice, Item.dispercent, Item.underPrice, Item.loan, Item.gift, Item.color);
+}
+
+//------------------ count result----------------------------
+function countResult(){
+  let number = document.getElementById("title__number");
+  let count = document.getElementsByClassName("productCategory__container");
+  number.innerHTML=count.length;
+}
+  window.onload=countResult();

@@ -204,7 +204,7 @@
   text-decoration: none;
   height: 100%;
 }
-.header-listDropMenu__menuInner li:hover {
+.header-listDropMenu__menuInner a:hover {
   background-color: rgb(1, 127, 255);
   border-color: rgb(1, 127, 255);
   color: white;
@@ -520,12 +520,6 @@
     opacity: 1;
   }
 }
-/* #main-banner__slideContainer img,
-.main-banner__dis-picture img {
-  width: 100%;
-  height: 274px;
-  border-radius: 4px;
-} */
 
 .main-banner__smallPicture {
   margin-left: 4px;
@@ -578,8 +572,8 @@
   width: 1236px;
   position: relative;
 }
-.disProduct-inner__frontArrow {
-  display: flex;
+#disProduct-inner__frontArrow {
+  display: none;
   align-items: center;
   justify-content: flex-start;
   width: 80px;
@@ -589,7 +583,7 @@
   z-index: 3;
   cursor: pointer;
 }
-.disProduct-inner__backArrow {
+#disProduct-inner__backArrow {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -600,12 +594,12 @@
   z-index: 3;
   cursor: pointer;
 }
-.disProduct-inner__frontArrow img,
-.disProduct-inner__backArrow img {
+#disProduct-inner__frontArrow img,
+#disProduct-inner__backArrow img {
   opacity: 0.3;
   width: 32px;
 }
-.disProduct-inner__frontArrow img {
+#disProduct-inner__frontArrow img {
   transform: rotate(180deg);
 }
 #disProduct-inner__productList {
@@ -635,7 +629,10 @@
 .productList__imageSecton img {
   position: absolute;
 }
-
+.main-disProduct__inner:hover #disProduct-inner__frontArrow img,
+.main-disProduct__inner:hover #disProduct-inner__backArrow img {
+  opacity: 1;
+}
 .productList-imageSecton__number {
   background-color: rgb(255, 66, 78);
   color: rgb(255, 255, 255);
@@ -930,6 +927,9 @@
   color: rgb(36, 36, 36);
   justify-content: space-evenly;
 }
+#main-productList__innerSection a:hover {
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+}
 .productList-innerSection__imageSection {
   display: flex;
   margin: 0px auto;
@@ -942,7 +942,7 @@
 
 .productList-innerSection__nameSection {
   padding: 0px 15px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   height: 40px;
