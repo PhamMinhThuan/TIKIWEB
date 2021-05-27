@@ -618,6 +618,9 @@
   height: 100%;
   padding: 27.7px;
 }
+#disProduct-inner__productList a:hover {
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+}
 .productList__imageSecton {
   width: 192px;
   height: 192px;

@@ -36,31 +36,29 @@ function arrowRun(m) {
 }
 
 // ------------------PRODUCTLIST-------------------
-// FUNCTION XÓA BORDER
-function eraseBorder() {
-  let imageList = document.getElementsByClassName("imageList");
-
+// FUNCTION THÊM BORDER
+ 
+function hoverBorder(event) {
+  const productId = event.target.getAttribute("productid");
+  let changeImage = document.querySelector("#mainImage_"+productId);
+  let imageList = document.getElementsByClassName("imageList"+productId);
   for (let i = 0; i < imageList.length; i++) {
     if (imageList[i].classList.contains("imageList__hover")) {
       imageList[i].classList.remove("imageList__hover");
     }
   }
-}
-// FUNCTION THÊM BORDER
-function hoverBorder(event) {
-  let changeImage = document.querySelector(".mainImage .mainImage__img");
-  eraseBorder();
+
   event.target.classList.add("imageList__hover");
   changeImage.src = event.target.src;
 }
 
 // FUNCTION TẠO DANH SÁCH SẢN PHẨM
-function addProduct(link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
+function addProduct(productid, link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
   document.getElementById("productList__productCategory").innerHTML+=`
   <a class="productCategory__container" href="`+link+`">  
   <div class="productCategory__mainImage">
   <div class="mainImage">
-    <img
+    <img  id="mainImage_`+productid+`"
       class="mainImage__img"
       width="200px"
       height="200px"
@@ -71,25 +69,29 @@ function addProduct(link, mainImage, image1, image2, image3, display4, image4, n
 </div>
 <div class="productCategory__imageList">
   <img
-    class="imageList imageList__hover"
+    productId = `+productid+`
+    class="imageList`+productid+` imageList__hover"
     onmouseover="hoverBorder(event)"
     src="./ASSET/image/`+image1+`"
     alt=""
   />
   <img
-    class="imageList"
+  productId = `+productid+`
+    class="imageList`+productid+`"
     onmouseover="hoverBorder(event)"
     src="./ASSET/image/`+image2+`"
     alt=""
   />
   <img
-    class="imageList"
+  productId = `+productid+`
+    class="imageList`+productid+`"
     onmouseover="hoverBorder(event)"
     src="./ASSET/image/`+image3+`"
     alt=""
   />
   <img 
-    class="imageList"
+  productId = `+productid+`
+    class="imageList`+productid+`"
     style="display: `+display4+`"
     onmouseover="hoverBorder(event)"
     src="./ASSET/image/`+image4+`"
@@ -158,9 +160,6 @@ function addProduct(link, mainImage, image1, image2, image3, display4, image4, n
   `
 }
 
-function ABC(){
-  
-}
 // ------------------REGISTER-------------------
 
 // FUNCTION OPEN ĐĂNG NHẬP
@@ -190,6 +189,7 @@ function validate() {
 // DANH SÁCH SẢN PHẨM
 ProductList=[
   { 
+    productid: 1,
     link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
@@ -208,6 +208,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 2,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -226,6 +227,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 3,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -244,6 +246,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 4,
     link:"#",
     mainImage: "category11.jpg",
     image1: "category11.jpg",
@@ -262,6 +265,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 5,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -280,6 +284,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 6,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -297,8 +302,9 @@ ProductList=[
     gift: "flex",
     color: "block",
   },
-  {
-    link:"#",
+  { 
+    productid: 7,
+    link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
     image2: "category12.jpg",
@@ -316,6 +322,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 8,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -334,6 +341,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 9,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -351,8 +359,9 @@ ProductList=[
     gift: "flex",
     color: "block",
   },
-  {
-    link:"#",
+  { 
+    productid: 10,
+    link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
     image2: "category12.jpg",
@@ -370,6 +379,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 11,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -388,6 +398,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 12,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -405,8 +416,9 @@ ProductList=[
     gift: "flex",
     color: "block",
   },
-  {
-    link:"#",
+  { 
+    productid: 13,
+    link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
     image2: "category12.jpg",
@@ -424,6 +436,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 14,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -442,6 +455,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 15,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -459,8 +473,9 @@ ProductList=[
     gift: "flex",
     color: "block",
   },
-  {
-    link:"#",
+  { 
+    productid: 16,
+    link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
     image2: "category12.jpg",
@@ -478,6 +493,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 17,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -496,6 +512,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 18,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -513,8 +530,9 @@ ProductList=[
     gift: "flex",
     color: "block",
   },
-  {
-    link:"#",
+  { 
+    productid: 19,
+    link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
     image2: "category12.jpg",
@@ -532,6 +550,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 20,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -550,6 +569,7 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 21,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -567,8 +587,9 @@ ProductList=[
     gift: "flex",
     color: "block",
   },
-  {
-    link:"#",
+  { 
+    productid: 22,
+    link:"../detail-page/main.html", 
     mainImage: "category11.jpg",
     image1: "category11.jpg",
     image2: "category12.jpg",
@@ -586,6 +607,7 @@ ProductList=[
     color: "none",
   },
   {
+    productid: 23,
     link:"#",
     mainImage: "category21.jpg",
     image1: "category21.jpg",
@@ -604,6 +626,121 @@ ProductList=[
     color: "block",
   },
   {
+    productid: 24,
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  { 
+    productid: 25,
+    link:"../detail-page/main.html", 
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    productid: 26,
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    productid: 27,
+    link:"#",
+    mainImage: "category31.jpg",
+    image1: "category31.jpg",
+    image2: "category32.jpg",
+    image3: "category33.jpg",
+    display4: "inline-block",
+    image4: "category34.jpg",
+    name: "Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 24,
+    disprice: "10.990.000",
+    dispercent: "-4%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "block",
+  },
+  { 
+    productid: 28,
+    link:"../detail-page/main.html", 
+    mainImage: "category11.jpg",
+    image1: "category11.jpg",
+    image2: "category12.jpg",
+    image3: "category13.jpg",
+    display4: "none",
+    image4: "",
+    name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
+    rating: "80%",
+    amount: 194,
+    disprice: "2.420.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "flex",
+    color: "none",
+  },
+  {
+    productid: 29,
+    link:"#",
+    mainImage: "category21.jpg",
+    image1: "category21.jpg",
+    image2: "category22.png",
+    image3: "category23.png",
+    display4: "inline-block",
+    image4: "category24.png",
+    name: "Điện Thoại Xiaomi Redmi 9 - Hàng Chính Hãng",
+    rating: "100%",
+    amount: 96,
+    disprice: "2.890.000",
+    dispercent: "-19%",
+    underPrice: "block",
+    loan: "flex",
+    gift: "none",
+    color: "block",
+  },
+  {
+    productid: 30,
     link:"#",
     mainImage: "category31.jpg",
     image1: "category31.jpg",
@@ -624,7 +761,7 @@ ProductList=[
 
 ]
 for(Item of ProductList){
-  addProduct(Item.link, Item.mainImage, Item.image1, Item.image2, Item.image3, Item.display4,Item.image4, Item.name, Item.rating, Item.amount, Item.disprice, Item.dispercent, Item.underPrice, Item.loan, Item.gift, Item.color);
+  addProduct(Item.productid ,Item.link, Item.mainImage, Item.image1, Item.image2, Item.image3, Item.display4,Item.image4, Item.name, Item.rating, Item.amount, Item.disprice, Item.dispercent, Item.underPrice, Item.loan, Item.gift, Item.color);
 }
 
 //------------------ count result----------------------------
