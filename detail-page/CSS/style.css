@@ -517,11 +517,11 @@
   width: 64px;
   height: 64px;
   margin-right: 12px;
+}
+.imageList__active {
+  border: 1px solid rgb(13, 92, 182);
   border-radius: 4px;
   overflow: hidden;
-}
-#imageList__active {
-  border: 1px solid rgb(13, 92, 182);
 }
 .main-detailProduct__midSection {
   margin: 0px 13px;
@@ -672,23 +672,32 @@
   color: rgb(36, 36, 36);
   font-weight: 600;
 }
-.main-detail-product-right-bottom-left-color__list-color {
+.productInformation-ColorSection__colorList {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
-.main-detail-product-right-bottom-left-color__list-color a {
-  cursor: pointer;
-  margin: 8px 12px 0px 0px;
-  padding: 8px 12px;
+.productInformation-ColorSection__colorList a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140px;
+  height: 66px;
+  margin: 8px 10px 0px 0px;
+  padding-left: 2px;
   color: rgb(36, 36, 36);
   font-size: 14px;
   position: relative;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(199, 199, 199);
+  background-color: rgb(242, 242, 242);
+  border: none;
   border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
 }
-.main-detail-product-right-bottom-left-color__list-color a img {
+.productInformation-ColorSection__colorList a span {
+  margin-left: 4px;
+}
+.colorList__stick {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -697,12 +706,12 @@
 .colorList__active {
   cursor: default;
 }
-.main-detail-product-right-bottom-left-color__list-color a:hover,
-.main-detail-product-right-bottom-left-color__list-color .active {
+.productInformation-ColorSection__colorList a:hover .colorList__stick {
   display: block;
 }
-.main-detail-product-right-bottom-left-color__list-color a:hover {
+.productInformation-ColorSection__colorList a:hover {
   border: 1px solid rgb(13, 92, 182);
+  background-color: rgb(229, 242, 255);
 }
 
 .productInformation__address {

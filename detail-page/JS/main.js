@@ -1,4 +1,36 @@
-// san pham tuong tu
+//------------------Detail Product-----------------------------
+// imageClick
+function clickProduct(event){
+  // erase
+  let imageList=document.querySelectorAll(".main-detailProduct__imageList a img");
+  for(let i=0; i<imageList.length; i++){
+    if(imageList[i].classList.contains("imageList__active")){
+      imageList[i].classList.remove("imageList__active");
+    }
+    console.log(imageList);
+  }
+
+// add
+event.target.classList.add("imageList__active");
+let mainImage=document.querySelector(".main-detailProduct__productImage img");
+mainImage.src = event.target.src;
+}
+// colorClick
+
+function colorClick(event){
+  //noi dung chon mau
+  let number = event.target.getAttribute("color");
+ let variousContent = document.querySelector(".imageSection__part"+number);
+ console.log(variousContent);
+ let sameContent = document.getElementsByClassName("detailProduct__imageSection");
+ for(let i=0; i<sameContent.length;i++){
+  sameContent[i].style.display="none";
+ }
+ variousContent.style.display="block";
+
+  // an noi dung khong lien quan
+}
+//------------------- san pham tuong tu-----------------------------
 let stepNumber = 0;
 function stepSlide(n){
 arrowRun(stepNumber+=n);
@@ -27,50 +59,7 @@ function arrowRun(m){
   
   }
   
-//   
-// function arrowRun(m){
-// let step = document.getElementById("main-parrityProduct__productList");
-//   if ((m > 2)||(m < 0) ){
-  
-//   }else{
-//   let sum = 0;
-//   sum = -1236*m;
-  
-//   step.style.marginLeft=sum+"px";
-//   }
-// }
-// let movement = [
-//   {
-//     marginLeft="0px",
-//   },
-//   {
-//     marginLeft="-100%",
-//   },
-//   {
-//     marginLeft="-200%",
-//   }
-// ]
-
-// let step = document.getElementById("main-parrityProduct__productList");
-// function running(m){
-//   if ((m > 2)||(m < 0) ){
-  
-//   }else{
-//   let sum = 0;
-//   sum = -1236*m;
-//   console.log(sum);
-//   step.style.marginLeft=sum+"px";
-//   }
-  
-// }
-// step.animate(running, {
-//   duration: 5000,
-//   fill: 'forwards'
-// });
-
-
-// san pham tuong tu
-
+// add san pham
 function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
   document.getElementById("main-parrityProduct__productList").innerHTML+=`
     <a href="">
@@ -123,7 +112,7 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
 }
     parrityProduct=[
       {
-        link: "OPPO-A12.jpg",
+        link: "OPPO-A12-31.jpg",
         name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
         width: "80%",
         amount: 194,
@@ -141,7 +130,7 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
         price: "3.590.000 ₫"
       },
       {
-        link: "OPPO-A12.jpg",
+        link: "OPPO-A12-31.jpg",
         name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
         width: "80%",
         amount: 194,
@@ -159,7 +148,7 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
         price: "3.590.000 ₫"
       },
       {
-        link: "OPPO-A12.jpg",
+        link: "OPPO-A12-31.jpg",
         name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
         width: "80%",
         amount: 194,
@@ -177,7 +166,7 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
         price: "3.590.000 ₫"
       },
       {
-        link: "OPPO-A12.jpg",
+        link: "OPPO-A12-31.jpg",
         name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
         width: "80%",
         amount: 194,
@@ -195,7 +184,7 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
         price: "3.590.000 ₫"
       },
       {
-        link: "OPPO-A12.jpg",
+        link: "OPPO-A12-31.jpg",
         name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
         width: "80%",
         amount: 194,
@@ -213,7 +202,7 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
         price: "3.590.000 ₫"
       },
       {
-        link: "OPPO-A12.jpg",
+        link: "OPPO-A12-31.jpg",
         name: "Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng",
         width: "80%",
         amount: 194,
@@ -236,23 +225,6 @@ function addProduct(link, name, width ,amount ,dis_price ,percent , price ){
   }
               
 
-// for(let i=0; i<link.length; i++){
-//   addProduct(link[i], name[i], price[i], dis_price[i]);
-// }
-// function accountDropdown(){
-//   document.querySelector(".header-listDropMenu__menuInner").classList.toggle("showDisappear");
-// }
-// function dropdown(){
-//   // let dropdownContent=document.getElementsByClassName("header-listDropMenu__menuInner");
-//   document.querySelector(".header-listDropMenu__menuInner").classList.toggle("showDisappear");
-// }
-// function unDropdown(){
-//   // let dropdownContent=document.getElementsByClassName("header-listDropMenu__menuInner");
-//   if (document.querySelector(".header-listDropMenu__menuInner").classList.contains("showDisappear")) {
-//     document.querySelector(".header-listDropMenu__menuInner").classList.remove("showDisappear");
-// }
-// }
-// function btn xem them noi dung, xoa class, thay doi ten noi dung btn
 function whatToSeeing(){
   let content = document.getElementById("main-productDescription__content");
   let buttonName = document.getElementById("moreSeeing");
@@ -267,9 +239,7 @@ function whatToSeeing(){
 // or dung content.classList.toggle("heightMinus"))
 // content.style.height = '';
 
-
-
-
+//------------------- dang nhap-----------------------------
 
 // FUNCTION OPEN ĐĂNG NHẬP
 function registerFormOpen(){
