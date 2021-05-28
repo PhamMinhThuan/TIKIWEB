@@ -689,7 +689,6 @@
   font-size: 14px;
   position: relative;
   background-color: rgb(242, 242, 242);
-  border: none;
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -705,6 +704,8 @@
 }
 .colorList__active {
   cursor: default;
+  border: 1px solid rgb(13, 92, 182);
+  background-color: rgb(229, 242, 255);
 }
 .productInformation-ColorSection__colorList a:hover .colorList__stick {
   display: block;

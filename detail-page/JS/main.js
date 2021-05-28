@@ -7,28 +7,47 @@ function clickProduct(event){
     if(imageList[i].classList.contains("imageList__active")){
       imageList[i].classList.remove("imageList__active");
     }
-    console.log(imageList);
   }
 
 // add
 event.target.classList.add("imageList__active");
-let mainImage=document.querySelector(".main-detailProduct__productImage img");
+let number = event.target.getAttribute("color");
+let mainImage=document.querySelector(".productImage_"+number);
 mainImage.src = event.target.src;
+
 }
 // colorClick
 
 function colorClick(event){
-  //noi dung chon mau
+   // an noi dung khong lien quan
   let number = event.target.getAttribute("color");
  let variousContent = document.querySelector(".imageSection__part"+number);
- console.log(variousContent);
- let sameContent = document.getElementsByClassName("detailProduct__imageSection");
- for(let i=0; i<sameContent.length;i++){
-  sameContent[i].style.display="none";
+ let sameContent = document.querySelectorAll(".productInformation-ColorSection__colorList a");
+ let imageSection= document.getElementsByClassName("detailProduct__imageSection");
+ let imageSmall= document.getElementsByClassName("colorList__stick");
+// erase imageSection__part
+ for(let i=0; i<imageSection.length;i++){
+    imageSection[i].style.display="none";
+// erase xóa class colorList__active
+  if(sameContent[i].classList.contains("colorList__active")){
+    sameContent[i].classList.remove("colorList__active");
+  }
+  //  erase colorList__img1
+  imageSmall[i].style.display="none";
  }
+ // add imageSection__part
  variousContent.style.display="block";
 
-  // an noi dung khong lien quan
+ let colorContent = document.querySelector(".colorList__a"+number);
+ 
+ // add class colorList__active
+ colorContent.classList.add("colorList__active");
+
+ let smallImgContent = document.querySelector(".colorList__img"+number);
+ smallImgContent.style.display="block";
+  //noi dung chon mau
+
+ 
 }
 //------------------- san pham tuong tu-----------------------------
 let stepNumber = 0;
@@ -255,8 +274,6 @@ function registerFormClose(){
           function validate(){
              var email = document.getElementById("registerEmail").value;
              var password = document.getElementById("registerPassword").value;
-             console.log(email);
-             console.log(password);
             if((email=="USERNAME@gmail.com")&&(password=="123456")){
               alert("Chúc mừng ban, đăng nhập thành công!");
 
