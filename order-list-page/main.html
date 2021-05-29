@@ -1100,112 +1100,54 @@
               </div>
             </div>
             <div id="productList__productCategory">
-              <!-- <a
-                class="productCategory__container"
-                onmouseover="changeClass(event)"
-                onmouseout="returnClass(event)"
-                href=""
-              >
-                <div class="productCategory__mainImage">
-                  <div class="mainImage">
-                    <img
-                      class="mainImage__img"
-                      width="200px"
-                      height="200px"
-                      src="./ASSET/image/category11.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="productCategory__imageList">
-                  <img
-                    class="imageList imageList__hover"
-                    onmouseover="hoverBorder(event)"
-                    src="./ASSET/image/category11.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="imageList"
-                    onmouseover="hoverBorder(event)"
-                    src="./ASSET/image/category12.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="imageList"
-                    onmouseover="hoverBorder(event)"
-                    src="./ASSET/image/category13.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="imageList"
-                    onmouseover="hoverBorder(event)"
-                    src="./ASSET/image/category14.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="productCategory__content">
-                  <div class="tikinowImage">
-                    <img src="./ASSET/image/tiki-now.png" alt="" />
-                  </div>
-                  <div class="nameProduct">
-                    <p>
-                      Điện Thoại Samsung Galaxy A72 (8GB/256GB) - Hàng Chính
-                      Hãng
-                    </p>
-                  </div>
-                  <div class="rateReview">
-                    <div class="rateReview__starSection">
-                      <div class="rateReview-starSection__grayStar">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div
-                        style="width: 80%"
-                        class="rateReview-starSection__yellowStar"
-                      >
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                    </div>
-                    <div class="rateReview__contentSection">(24)</div>
-                  </div>
-                  <div class="priceDiscount">
-                    <p>10.990.000 <u>đ</u></p>
-                    <span>-4%</span>
-                  </div>
-                  <div style="display: block" class="badgeUnderPrice">
-                    <img src="./ASSET/image/badge-under-price.png" alt="" />
-                  </div>
-                  <div style="display: block" class="badgeBenefits">
-                    <img src="./ASSET/image/badge-benefit1.png" alt="" />
-                    <span>Trả góp</span>
-                  </div>
-                  <div style="display: flex" class="freegiftList">
-                    <img
-                      class="smallFreeGift"
-                      src="./ASSET/image/free-gift1.png"
-                      alt=""
-                    />
-
-                    <span>Quà tặng kèm</span>
-                    <img
-                      class="bigFreeGift"
-                      src="./ASSET/image/free-gift2.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div style="display: block" class="badgeAdditionalInfo">
-                    <span style="color: rgb(120, 120, 120)">Nhiều màu</span>
-                  </div>
-                </div>
-              </a> -->
+              <div id="productCategory1" class="productCategory"></div>
+              <div id="productCategory2" class="productCategory"></div>
+              <div id="productCategory3" class="productCategory"></div>
+              <div id="productCategory4" class="productCategory"></div>
+              <div id="productCategory5" class="productCategory"></div>
             </div>
+          </div>
+          <div class="category__pagination">
+            <ul>
+              <li id="frontArrow">
+                <a onclick="clickPagation(--figure)"
+                  ><i class="pagination__front"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  onclick="clickPagation(figure=1)"
+                  class="pagination__active active1"
+                  step="1"
+                  >1</a
+                >
+              </li>
+              <li>
+                <a onclick="clickPagation(figure=2)" class="active2" step="2"
+                  >2</a
+                >
+              </li>
+              <li>
+                <a onclick="clickPagation(figure=3)" class="active3" step="3"
+                  >3</a
+                >
+              </li>
+              <li>
+                <a onclick="clickPagation(figure=4)" class="active4" step="4"
+                  >4</a
+                >
+              </li>
+              <li>
+                <a onclick="clickPagation(figure5)" class="active5" step="5"
+                  >5</a
+                >
+              </li>
+              <li id="backArrow">
+                <a onclick="clickPagation(++figure)"
+                  ><i class="pagination__back"></i
+                ></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

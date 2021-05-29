@@ -434,7 +434,7 @@
 #main {
   background-color: #f4f4f4;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 .main__firstBar {
   background-color: rgb(239, 239, 239);
@@ -490,8 +490,6 @@
 .main-contentSection__sidebar {
   width: 236px;
   border-radius: 4px 0px 0px 4px;
-
-  height: 5000px;
   border-right: 1px solid rgb(239, 239, 239);
 }
 .sidebar__orderList,
@@ -630,6 +628,7 @@
 .main-contentSection__category {
   width: 1000px;
   border-radius: 0px 4px 4px 0px;
+  position: relative;
 }
 .category__title {
   font-size: 25px;
@@ -778,14 +777,21 @@
   margin-right: 10px;
   color: rgb(36, 36, 36);
 }
-#productList__productCategory {
+#productCategory1 {
   display: flex;
   flex-flow: row wrap;
 }
-#productList__productCategory a:hover {
+#productCategory2,
+#productCategory3,
+#productCategory4,
+#productCategory5 {
+  display: none;
+  flex-flow: row wrap;
+}
+.productCategory__container:hover {
   box-shadow: 0 0 10px 3px #ecebeb;
 }
-#productList__productCategory a {
+.productCategory__container {
   width: 25%;
   padding: 20px 15px;
   display: flex;
@@ -956,7 +962,55 @@
   border-radius: 2.1px;
   margin-left: 8px;
 }
-
+.category__pagination {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+}
+#frontArrow {
+  display: none;
+}
+#backArrow {
+  display: block;
+}
+.category__pagination ul {
+  display: flex;
+  padding: 20px 20px 0px 0px;
+}
+.category__pagination ul li {
+  margin-right: 5px;
+  color: black;
+}
+.category__pagination ul li a {
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 550;
+}
+.pagination__active {
+  color: white;
+  background: rgb(24, 158, 255);
+}
+.category__pagination ul li a:hover {
+  background-color: rgba(24, 158, 255, 0.3);
+}
+.pagination__front {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px -189px;
+  width: 8px;
+  height: 14px;
+}
+.pagination__back {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px -189px;
+  width: 8px;
+  height: 14px;
+  transform: rotate(180deg);
+}
 /*----------------------- main end------------------------- */
 /*----------------------- footer------------------------- */
 #footer {
