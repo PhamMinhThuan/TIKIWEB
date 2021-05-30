@@ -781,60 +781,14 @@
       <div class="main__parrityProduct wrapper">
         <h4>SẢN PHẨM TƯƠNG TỰ</h4>
         <div class="main-parrityProduct__container wrapper">
-          <a class="parrityProduct__arrowFront" onclick="stepSlide(-1)">
+          <a class="parrityProduct__arrowFront" onclick="arrowRun(--stepNumber)">
             <span id="arrowFront">
               <i class="arrowFrontIcon"></i>
             </span>
           </a>
           <div id="main-parrityProduct__productList">
-            <!-- <a href="">
-              <div class="productList__productImage">
-                <img
-                  width="200px"
-                  height="200px"
-                  src="./ASSET/image/redmi9.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="productList__product Content">
-                <div class="productList-productContent__productName">
-                  Điện Thoại Oppo A12 (3GB/32GB) - Hàng Chính Hãng
-                </div>
-                <div class="productList-productContent__productRating">
-                  <div class="productList-productRating__star">
-                    <div class="productList-productRating__grayStar">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div
-                      style="width: 60%"
-                      class="productList-productRating__yellowStar"
-                    >
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                  <div class="productList-productRating__review">
-                    (194 nhận xét)
-                  </div>
-                </div>
-                <div class="productList-productContent__disPrice">
-                  <span> 2.420.000 ₫</span>
-                  <p>-19%</p>
-                </div>
-                <div class="productList-productContent__originalPrice">
-                  2.990.000 ₫
-                </div>
-              </div>
-            </a> -->
           </div>
-          <a class="parrityProduct__arrowBack" onclick="stepSlide(1)">
+          <a class="parrityProduct__arrowBack" onclick="arrowRun(++stepNumber)">
             <span id="arrowBack">
               <i class="arrowBackIcon"></i>
             </span>
@@ -2342,7 +2296,7 @@
                   >
                 </li>
                 <li id="backArrow">
-                  <a onclick="clickPagation(++figure)" href=""
+                  <a onclick="clickPagation(++figure)" href="#main__productRating"
                     ><i class="pagination__back"></i
                   ></a>
                 </li>

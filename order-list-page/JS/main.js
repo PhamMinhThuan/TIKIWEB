@@ -51,7 +51,7 @@ function hoverBorder(event) {
   event.target.classList.add("imageList__hover");
   changeImage.src = event.target.src;
 }
-/* <div id="productCategory" class="productCategory`+step+`"> */
+// ------------------productCategory1-------------------
 // FUNCTION TẠO DANH SÁCH SẢN PHẨM 
 // productCategory1
 function addProduct1(productid, link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
@@ -122,7 +122,7 @@ function addProduct1(productid, link, mainImage, image1, image2, image3, display
 </div>
   `
 }
-
+// ------------------productCategory2-------------------
 // productCategory2
 function addProduct2(productid, link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
   document.getElementById("productCategory2").innerHTML+=`
@@ -192,6 +192,7 @@ function addProduct2(productid, link, mainImage, image1, image2, image3, display
 </div>
   `
 }
+// ------------------productCategory3-------------------
 // productCategory3
 function addProduct3(productid, link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
   document.getElementById("productCategory3").innerHTML+=`
@@ -261,6 +262,7 @@ function addProduct3(productid, link, mainImage, image1, image2, image3, display
 </div>
   `
 }
+// ------------------productCategory4-------------------
 // productCategory4
 function addProduct4(productid, link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
   document.getElementById("productCategory4").innerHTML+=`
@@ -330,7 +332,7 @@ function addProduct4(productid, link, mainImage, image1, image2, image3, display
 </div>
   `
 }
-
+// ------------------productCategory5-------------------
 // productCategory5
 function addProduct5(productid, link, mainImage, image1, image2, image3, display4, image4, name, rating, amount, disprice, dispercent, underPrice, loan, gift, color){
   document.getElementById("productCategory5").innerHTML+=`
@@ -426,11 +428,11 @@ function validate() {
   }
 }
 
-//------------------ pagation----------------------------
+//------------------ pagination----------------------------
 let figure = 1;
 function clickPagation(figure){
   let li = document.querySelectorAll(".category__pagination ul li a");
-  // erase class pagination__active
+   // XÓA HIỆU ỨNG
   for(let i=0;i<li.length;i++){
     if(li[i].classList.contains("pagination__active")){
       li[i].classList.remove("pagination__active");
@@ -438,7 +440,7 @@ function clickPagation(figure){
   }
 let frontArrow = document.getElementById("frontArrow");
 let backArrow = document.getElementById("backArrow");
-
+// HIỆN VÀ ẨN ARROW IMAGE
   if(figure==1){
     frontArrow.style.display="none";
     backArrow.style.display="block";
@@ -451,13 +453,13 @@ let backArrow = document.getElementById("backArrow");
     frontArrow.style.display="block";
     backArrow.style.display="block";
   }
-      // figure = event.target.getAttribute("step");
+
   let mainTarget = document.querySelector(".active"+figure);
-  // add class pagination__active
+ // THÊM HIỆU ỨNG VÀO ĐỐI TƯỢNG
   mainTarget.classList.add("pagination__active");
 
   let categoryTarget = document.querySelector("#productCategory"+figure);
-  // diplay none .productCategory
+  // ẨN TẤT CẢ productCategory
   let categoryNumber  = document.querySelectorAll(".productCategory");
   console.log(categoryNumber.length);
   for(let i=0;i<categoryNumber.length;i++){
@@ -465,7 +467,7 @@ let backArrow = document.getElementById("backArrow");
       categoryNumber[i].style.display="none";
     }
   }
-// diplay flex .productCategory target
+// HIỆN ĐỐI TƯỢNG CHỌN
   categoryTarget.style.display="flex"; 
 
 

@@ -1018,6 +1018,9 @@
   border: 1px solid rgb(204, 204, 204);
   border-radius: 50%;
 }
+#arrowFront {
+  display: none;
+}
 .arrowFrontIcon {
   background-image: url(../ASSET/image/symbol.png);
   background-position: -392px -189px;

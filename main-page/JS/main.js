@@ -30,19 +30,15 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-//------------------ PRODUCT GIA SOC----------------------------
+//------------------ main__disProduct----------------------------
 
-// disproduct Section function
 let stepNumber = 0;
-function stepSlide(n){
-arrowRun(stepNumber+=n);
-}  
+function arrowRun(m){
 let step = document.getElementById("disProduct-inner__productList");
 let front = document.getElementById("disProduct-inner__frontArrow");
 let back = document.getElementById("disProduct-inner__backArrow");
-front.style.display="none";
-function arrowRun(m){
-// Hiện nút
+
+// HIỆN VÀ ẨN ARROW IMAGE
 if (m>=2){
   back.style.display="none";
   front.style.display="flex";
@@ -825,7 +821,7 @@ for (let product of sumOfProduct){
   addProduct(product.linking , product.link, product.name, product.rating, product.rate_amount, product.price, product.dis_price)
   }
       
-// function moreInformation button
+// XEM THÊM
 document.getElementById("main-productList__moreButton").addEventListener("click", toggleButton)
   function toggleButton(){
     let innerSection = document.getElementById("main-productList__innerSection");
