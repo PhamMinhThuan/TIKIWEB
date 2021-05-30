@@ -71,6 +71,7 @@ if (m>=2){
      amount: "194"
    },
    {
+     link: "#",
     image: "redmi9.jpg",
     sale: "19%",
     price: " 2.890.000 ₫",
@@ -78,6 +79,7 @@ if (m>=2){
     amount: "96"
     },
     {
+      link: "#",
       image: "galaxy-a72.jpg",
       sale: "4%",
       price: " 10.990.000 ₫",
@@ -93,6 +95,7 @@ if (m>=2){
      amount: "194"
     },
     {
+      link: "#",
      image: "redmi9.jpg",
      sale: "19%",
      price: " 2.890.000 ₫",
@@ -100,6 +103,7 @@ if (m>=2){
      amount: "96"
     },
     {
+      link: "#",
       image: "galaxy-a72.jpg",
       sale: "4%",
       price: " 10.990.000 ₫",
@@ -115,6 +119,7 @@ if (m>=2){
      amount: "194"
     },
     {
+      link: "#",
     image: "redmi9.jpg",
     sale: "19%",
     price: " 2.890.000 ₫",
@@ -122,6 +127,7 @@ if (m>=2){
     amount: "96"
     },
     {
+      link: "#",
     image: "galaxy-a72.jpg",
     sale: "4%",
     price: " 10.990.000 ₫",
@@ -137,6 +143,7 @@ if (m>=2){
      amount: "194"
     },
     {
+      link: "#",
     image: "redmi9.jpg",
     sale: "19%",
     price: " 2.890.000 ₫",
@@ -144,6 +151,31 @@ if (m>=2){
     amount: "96"
     },
     {
+      link: "#",
+    image: "galaxy-a72.jpg",
+    sale: "4%",
+    price: " 10.990.000 ₫",
+    progress: "80%",
+    amount: "24"
+    },
+    {
+      link:"../detail-page/main.html",
+     image: "OPPO-A12.jpg",
+     sale: "19%",
+     price: " 2.420.000 ₫",
+     progress: "90%",
+     amount: "194"
+    },
+    {
+      link: "#",
+    image: "redmi9.jpg",
+    sale: "19%",
+    price: " 2.890.000 ₫",
+    progress: "75%",
+    amount: "96"
+    },
+    {
+      link: "#",
     image: "galaxy-a72.jpg",
     sale: "4%",
     price: " 10.990.000 ₫",
@@ -154,7 +186,7 @@ if (m>=2){
   function addDisProduct(link, image, sale, price, progress, amount){
     document.getElementById("disProduct-inner__productList").innerHTML+=`
     <a href="`+link+`">
-    
+    <div class="productList__container">
     <div class="productList__imageSecton">
       <img 
       width= "192px"
@@ -174,6 +206,7 @@ if (m>=2){
       ></div>
       <span>Đã bán `+amount+`</span>
       <img src="./ASSET/image/fire_icon.svg" alt="" />
+    </div>
     </div>
   </a>
 `

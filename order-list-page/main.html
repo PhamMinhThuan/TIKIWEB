@@ -1086,7 +1086,7 @@
                 ><img src="./ASSET/image/kind-product4.png" alt=""
               /></a>
             </div>
-            <div class="productList__productSort">
+            <div id="productList__productSort">
               <div class="productList-productSort__p1">
                 <a class="active-category" href="">Phổ Biến</a>
                 <a href="">Bán Chạy</a>
@@ -1110,40 +1110,61 @@
           <div class="category__pagination">
             <ul>
               <li id="frontArrow">
-                <a onclick="clickPagation(--figure)"
+                <a
+                  onclick="clickPagation(--figure)"
+                  href="#productList__productSort"
                   ><i class="pagination__front"></i
                 ></a>
               </li>
               <li>
                 <a
                   onclick="clickPagation(figure=1)"
+                  href="#productList__productSort"
                   class="pagination__active active1"
                   step="1"
                   >1</a
                 >
               </li>
               <li>
-                <a onclick="clickPagation(figure=2)" class="active2" step="2"
+                <a
+                  onclick="clickPagation(figure=2)"
+                  href="#productList__productSort"
+                  class="active2"
+                  step="2"
                   >2</a
                 >
               </li>
               <li>
-                <a onclick="clickPagation(figure=3)" class="active3" step="3"
+                <a
+                  onclick="clickPagation(figure=3)"
+                  href="#productList__productSort"
+                  class="active3"
+                  step="3"
                   >3</a
                 >
               </li>
               <li>
-                <a onclick="clickPagation(figure=4)" class="active4" step="4"
+                <a
+                  onclick="clickPagation(figure=4)"
+                  href="#productList__productSort"
+                  class="active4"
+                  step="4"
                   >4</a
                 >
               </li>
               <li>
-                <a onclick="clickPagation(figure5)" class="active5" step="5"
+                <a
+                  onclick="clickPagation(figure=5)"
+                  href="#productList__productSort"
+                  class="active5"
+                  step="5"
                   >5</a
                 >
               </li>
               <li id="backArrow">
-                <a onclick="clickPagation(++figure)"
+                <a
+                  onclick="clickPagation(++figure)"
+                  href="#productList__productSort"
                   ><i class="pagination__back"></i
                 ></a>
               </li>

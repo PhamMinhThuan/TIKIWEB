@@ -1226,13 +1226,13 @@
   background: rgb(66, 149, 209);
   color: rgb(255, 255, 255);
 }
-.main__productRating h4 {
+#main__productRating h4 {
   margin: 0px 0px 10px;
   color: rgb(51, 51, 51);
   font-size: 19px;
   font-weight: 500;
 }
-.main__productRating {
+#main__productRating {
   margin-bottom: 40px;
 }
 
@@ -1339,6 +1339,24 @@
   font-weight: 550;
   margin-bottom: 10px;
 }
+.imageList__a {
+  position: relative;
+  overflow: hidden;
+}
+.imageList__a div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(41, 41, 41, 0.8);
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
 .motherSection-rightSection__ImageList {
   display: flex;
   justify-content: space-between;
@@ -1370,13 +1388,24 @@
 }
 .main-productRating__childSection {
   background-color: rgb(255, 255, 255);
-  padding: 32px 0px;
+  padding-bottom: 32px;
 
   border-top: 1px solid #f4f4f4;
 }
-.productRating__childSection__container {
-  padding: 0px 48px;
+#productRating-childSection__step1 {
+  display: block;
+}
+#productRating-childSection__step2,
+#productRating-childSection__step3,
+#productRating-childSection__step4,
+#productRating-childSection__step5 {
+  display: none;
+}
+
+.productRating-childSection__container {
+  padding: 20px 48px;
   display: flex;
+  border-top: 1px solid #f4f2f2;
 }
 .childSection__customerSection {
   display: flex;
@@ -1509,6 +1538,9 @@
   padding: 0px 7px;
   border-left: 1px solid rgb(238, 238, 238);
 }
+.childSection-commentSection__content {
+  margin: 10px 0px 0px 0px;
+}
 .childSection-commentSection__labels {
   display: flex;
   margin: 10px 0px 0px 0px;
@@ -1591,78 +1623,85 @@
   border-radius: 0px 0px 4px 4px;
 }
 .productRating-pagination__container {
-  margin-right: 48px;
+  margin-right: 20px;
   display: flex;
   position: relative;
 }
 .productRating-pagination__pages {
-  display: flex;
   position: absolute;
   right: 0px;
   bottom: 100%;
 }
-
-.pagination__page {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  margin: 0px 5px;
+.productRating-pagination__pages ul {
   display: flex;
-  align-items: center;
+  padding: 20px 0px 0px 0px;
+}
+.productRating-pagination__pages ul li {
+  margin-right: 5px;
+  color: black;
+}
+.productRating-pagination__pages ul li a {
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  display: flex;
   justify-content: center;
-  color: rgb(51, 51, 51);
-  background-color: rgb(247, 247, 247);
+  align-items: center;
   font-size: 16px;
   font-weight: 550;
 }
-.pagination__previous,
-.pagination__next {
-  position: relative;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(198, 198, 198);
-  margin: 0px 10px;
+.productRating-pagination__pages ul li a:hover {
+  background-color: rgba(24, 158, 255, 0.3);
 }
-.fa-angle-left,
-.fa-angle-right {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.pagination__active {
+  color: white;
+  background-color: rgb(24, 158, 255);
 }
 
+.pagination__front {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px -189px;
+  width: 8px;
+  height: 14px;
+}
+#frontArrow {
+  display: none;
+}
+.pagination__back {
+  background-image: url(../ASSET/image/symbol.png);
+  background-position: -392px -189px;
+  width: 8px;
+  height: 14px;
+  transform: rotate(180deg);
+}
 .main__moreDiscover {
   background-color: rgb(255, 255, 255);
   margin-bottom: 40px;
   overflow: hidden;
   border-radius: 4px;
 }
-.main-moreDiscover__productList {
+#main-moreDiscover__productList {
   display: flex;
   flex-flow: row wrap;
   border-top: 1px solid #f4f4f4;
+  overflow: hidden;
 }
 .moreDiscover-productList__product {
   display: flex;
   flex-flow: column nowrap;
-  flex-basis: 245px;
-  padding: 12px 16px;
   color: rgb(36, 36, 36);
 }
-
+.productList-product__container {
+  width: 247.2px;
+  padding: 12px 16px;
+}
 .main-moreDiscover__heading {
   padding: 12px 16px;
 }
-.productList__product__productImage {
+.productList-product__productImage {
   margin: 0px 7.5px;
 }
-.productList__product__productName {
+.productList-product__productName {
   font-size: 15px;
   line-height: 20px;
   margin: 0px 0px 4px 0px;
@@ -1672,22 +1711,22 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.productList__product__ratingNumber {
+.productList-product__ratingNumber {
   display: flex;
   align-items: center;
   margin: 0px 0px 4px 0px;
 }
-.productList__product__rating {
+.productList-product__rating {
   position: relative;
   display: flex;
   align-items: center;
   margin: 0px 5px 0px 0px;
   font-size: 8px;
 }
-.productList__product__grayRating {
+.productList-product__grayRating {
   color: rgb(199, 199, 199);
 }
-.productList__product__yellowRating {
+.productList-product__yellowRating {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -1695,29 +1734,29 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.productList__product__number {
+.productList-product__number {
   display: flex;
   align-items: center;
   font-size: 13px;
   color: rgb(120, 120, 120);
 }
-.productList__product__productDisPrice {
+.productList-product__productDisPrice {
   display: flex;
   align-items: center;
 }
-.productList__product__productDisPrice p {
+.productList-product__productDisPrice p {
   font-size: 17px;
   font-weight: 550;
   margin: 0px 5px 0px 0px;
 }
-.productList__product__productDisPrice span {
+.productList-product__productDisPrice span {
   font-size: 15px;
   background: rgb(255, 66, 78);
   color: white;
   border-radius: 2px;
   padding: 0px 2px;
 }
-.moreDiscover__moreInf {
+#moreDiscover__moreInf {
   cursor: pointer;
   width: 240px;
   padding: 8px 12px;
@@ -1728,10 +1767,14 @@
   font-weight: 600px;
   text-align: center;
   margin: 15px auto;
+  background-color: rgb(255, 255, 255);
 }
-.moreDiscover__moreInf:hover {
+#moreDiscover__moreInf:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(13, 92, 182);
+}
+.moreInf {
+  height: 1560px;
 }
 /*----------------------- main end------------------------- */
 /*----------------------- footer------------------------- */
