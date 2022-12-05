@@ -2,7 +2,7 @@
 
 ## PROJECT OVERVIEW
 ### This is my Tiki web project about e-commerce. 
-This describes how to create the Tiki web by HTML, CSS.
+This describes how to create Tiki web pages by HTML, CSS.
 
 ## CONTENT
 There are three pages which can access each other.
