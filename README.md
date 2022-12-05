@@ -6,4 +6,9 @@ This describes how to create the Tiki web by HTML, CSS.
 
 ## CONTENT
 There are three pages which can access each other.
-![](/pages.PNG)
+
+### [Detail Page](https://phamminhthuan.github.io/TIKIWEB/detail-page/main.html)
+
+### [Main Page](https://phamminhthuan.github.io/TIKIWEB/main-page/main.html)
+
+### [Order List Page](https://phamminhthuan.github.io/TIKIWEB/order-list-page/main.html)
